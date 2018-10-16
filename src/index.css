@@ -1,8 +1,8 @@
-/*@font-face{
+@font-face{
     font-family: 'Segoe';
     src: url('font/SEGOEUI.TTF') format('truetype');
 }
-*/
+
 html, body{
     padding: 0;
     margin: 0;
@@ -18,7 +18,7 @@ html, body{
 }
 
 .title, h1{
-    font-family: Arial Black;
+    font-family: Segoe, Arial Black, sans-serif;
     font-size: 70px;
     color: white;
 }
