@@ -8,23 +8,23 @@ html, body{
     margin: 0;
     height: 100%;
 }
+
 .background{
     background-image:  url(../edeka-logo.png), url(../edeka-slogan.png), url(../EDEKA_Hintergrund.jpg);
     background-attachment: fixed;
-    background-size: 100px 150px, 500px 75px,cover;
-    background-position: bottom 10px left 30px, bottom 10px right 30px, center;
+    background-size: 45px 65px, 190px 35px,cover;
+    background-position: bottom 10px left 20px, bottom 10px right 10px, center;
     background-repeat: no-repeat;
-
 }
 
 .title, h1{
-    font-family: Segoe, Arial Black, sans-serif;
-    font-size: 70px;
+    font-family: Arial Black, sans-serif;
+    font-size: 30px;
     color: white;
 }
 
 .title{
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 10px;
 }
 
@@ -32,3 +32,52 @@ html, body{
     margin: 0px;
     padding: 0px;
 }
+
+
+/*Größeneinstellungen für Smartphones*/
+@media (min-width: 576px){
+    .background{
+        background-size: 55px 75px, 300px 45px,cover;
+        background-position: bottom 10px left 20px, bottom 10px right 20px, center;
+    }
+
+    .title, h1{
+        font-size: 40px;
+    }
+
+    .title{
+        margin-left: 20px;
+    }
+}
+
+/* Größeneinstellungen für Tabletgröße*/
+@media (min-width: 768px) {
+    .background{
+        background-size: 75px 100px, 350px 50px,cover;
+        background-position: bottom 10px left 30px, bottom 10px right 30px, center;
+    }
+
+    .title, h1{
+        font-size: 50px;
+    }
+
+    .title{
+        margin-left: 30px;
+    }
+}
+
+/* Größeneinstellungen für Desktops*/
+@media (min-width: 1200px) {
+    .background{
+        background-size: 100px 150px, 500px 75px,cover;
+        background-position: bottom 10px left 30px, bottom 10px right 30px, center;
+    }
+
+    .title, h1{
+        font-size: 70px;
+    }
+
+    .title{
+        margin-left: 30px;
+    }
+ }
