@@ -5,6 +5,7 @@
 
 html{
     font-family: Segoe, sans-serif;
+    color: white;
 }
 
 html, body{
@@ -24,7 +25,6 @@ html, body{
 .title, h1{
     font-family: Arial Black, sans-serif;
     font-size: 30px;
-    color: white;
 }
 
 .title{
@@ -35,7 +35,6 @@ html, body{
 .container{
     margin: 0px;
     padding: 0px;
-    color: white;
 }
 
 .actionbar{
