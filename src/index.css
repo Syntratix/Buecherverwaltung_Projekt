@@ -3,6 +3,10 @@
     src: url('font/SEGOEUI.TTF') format('truetype');
 }
 
+html{
+    font-family: Segoe, sans-serif;
+}
+
 html, body{
     padding: 0;
     margin: 0;
@@ -31,7 +35,6 @@ html, body{
 .container{
     margin: 0px;
     padding: 0px;
-    font-family: Arial Black, sans-serif;
     color: white;
 }
 
@@ -53,7 +56,6 @@ html, body{
     font-size: 15px;
     border: none;
     margin-left: 10px;
-    font-family: Segoe;
     padding: 4px;
 }
 
