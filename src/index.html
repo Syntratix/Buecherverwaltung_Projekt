@@ -19,12 +19,13 @@
                         <h1> Bücherverwaltung </h1>
                     </div>
                     <div class="actionbar">
+                        <div class="listButton">
                         <div class = "liste">
                           <ul >
-                              <li> <var>mainAnzeige</var>
+                              <li class="list-group-item list-group-item-secondary"> Main Anzeige
                                 <ul>
-                                  <li><var>ersterEintrag</var></li>
-                                  <li><var>zweiterEintrag</var></li>
+                                  <li class="list-group-item list-group-item-secondary ">Erster Eintrag</li>
+                                  <li class="list-group-item list-group-item-secondary">Zweiter Eintrag</li>
                               </ul>
                              </li>
                           </ul>
@@ -33,18 +34,21 @@
                           <button class="clickBtn btn" id= "hinzuBtn" onClick="hinzufuegen()" type="button">Buch hinzufügen</button>
                           <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button">Alle Bücher anzeigen</button>
                          </div>
-                      </div>
+                         </div>
                     <div class="searchbar">
-
+                        <input class="searchbarInput form-control-sm" type="text" placeholder="Buch suchen.."></input>
+                        <button class="searchButton btn" id=suchButton type="button"><img id=lupe src="../lupe3.png"/></button>
+                    </div>
                     </div>
                 </div>
 
                 <div class="books">
 
-                </div>
-                <ul id="list">
+                  <ul id="list">
 
-                </ul>
+                  </ul>
+
+                </div>
         </body>
 
         <script src="index.js" rel="funktionen"></script>
