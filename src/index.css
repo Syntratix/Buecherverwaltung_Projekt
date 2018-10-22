@@ -37,10 +37,18 @@ html, body{
     padding: 0px;
 }
 
-.actionbar{
+.listButton{
     width: 67%;
+    float:left;
 }
-
+/*Suchbar*/
+.searchbar{
+    width:33%;
+    float:right;
+}
+.searchbarInput{
+    margin-right: 0px;
+}
 .liste{
   width:30%;
   float: left;
@@ -55,6 +63,20 @@ html, body{
     font-size: 15px;
     border: none;
     margin-left: 10px;
+    padding: 4px;
+}
+.searchButton{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    padding:4px;
+}
+#lupe{
+    height: 20px;
+}
+.searchbarInput{
+    font-size: 15px;
+    border: none;
     padding: 4px;
 }
 
@@ -99,6 +121,7 @@ ul li ul:hover {
   opacity: 1;
   display: block;
 }
+
 
 
 
