@@ -5,10 +5,13 @@
             <meta charset="utf-8">
             <title>index</title>
 
-            <link href="Firebase.html" rel="import" />
+            <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+            <script src="database.js" rel="datenbank"></script>
+            <script src="index.js" rel="funktionen"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
             <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
             <link href="index.css" rel="stylesheet">
-            <script src="bootstrap/js/bootstrap.min.js"></script>
+
         </head>
 
         <body class="background container" >
@@ -29,8 +32,8 @@
                           </ul>
                         </div>
                         <div class"button">
-                          <button class="clickBtn btn" id= hinzuBtn type="button">Buch hinzufügen</button>
-                          <button class="clickBtn btn" id= anzeigBtn type="button">Alle Bücher anzeigen</button>
+                          <button class="clickBtn btn" id= "hinzuBtn" onClick="hinzufuegen()" type="button">Buch hinzufügen</button>
+                          <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button">Alle Bücher anzeigen</button>
                          </div>
                          </div>
                     <div class="searchbar">
