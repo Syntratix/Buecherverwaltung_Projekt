@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 "use strict"
 
 var hinzuBtn = document.getElementById("hinzuBtn");
@@ -29,4 +28,3 @@ function anzeigen() {
       ulList.appendChild(li);
     });
 }
->>>>>>> e64ded9a0a6985823c6bb1a4ea79a473cea94564
