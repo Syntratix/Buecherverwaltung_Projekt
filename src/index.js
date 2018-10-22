@@ -1,9 +1,9 @@
 "use strict"
 
-    import stylesheet from "./index.css";
+var hinzuBtn = document.getElementById("hinzuBtn");
 
-    var database = firebase.database().ref().child("buecher");
+function hinzufuegen() {
+    var firebaseRef = firebase.database().ref();
 
-    rootRef.on("child_added", snap => {
-        alert(snap.val());
-    });
+    firebaseRef.child("IT For DUMMYS").set("123456789");
+}
