@@ -5,6 +5,7 @@
 
 html{
     font-family: Segoe, sans-serif;
+
 }
 
 html, body{
@@ -58,12 +59,19 @@ html, body{
     padding: 4px;
 }
 
+.list{
+  border: 5px;
+}
+
 /*Dropdown*/
 
 .liste li {
  display: block;
  transition-duration: 0.5s;
  border-style: groove;
+ font-family: Segoe, sans-serif;
+ font-style: normal;
+ padding: 2px;
 }
 
 .liste li:hover {
@@ -77,7 +85,10 @@ html, body{
   transition: all 5s ease;
   padding-top: 4px;
   display: none;
-  left: 0px;
+  padding-left: 0;
+  margin-left: -3px;
+  margin-bottom: 2px;
+  font-family: Segoe, sans-serif;
 }
 
 .liste ul li:hover >  ul,
