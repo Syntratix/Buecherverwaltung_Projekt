@@ -28,3 +28,6 @@ function anzeigen() {
       ulList.appendChild(li);
     });
 }
+function suchen() {
+    var sucheingabe = document.getElementById('suchBar')
+}
