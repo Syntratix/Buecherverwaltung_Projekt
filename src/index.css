@@ -5,12 +5,10 @@
 
 html{
     font-family: Segoe, sans-serif;
-
 }
 
 html, body{
     padding: 0;
-    margin: 0;
     height: 100%;
     color: white;
 }
@@ -34,8 +32,11 @@ html, body{
 }
 
 .container{
-    margin: 0px;
-    padding: 0px;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+    width:100%;
+    max-width:100%;
 }
 
 .listButton{
@@ -48,23 +49,10 @@ html, body{
     float:right;
 }
 .searchbarInput{
-    margin-right: 0px;
-}
-.liste{
-  width:30%;
-  float: left;
-}
-
-.button{
-  width:70%;
-  float: right;
-}
-
-.clickBtn{
     font-size: 15px;
     border: none;
-    margin-left: 10px;
     padding: 4px;
+    margin-right: 0;
 }
 .searchButton{
     background-color: white;
@@ -77,9 +65,25 @@ html, body{
     height: 20px;
 }
 
+<<<<<<< HEAD
 .searchbarInput[type=text]{
+=======
+
+.liste{
+  width:30%;
+  float: left;
+}
+
+.button{
+  width:70%;
+  float: right;
+}
+
+.clickBtn{
+>>>>>>> fd4f5975738b6328927b290e2af8d3995ac3ee7e
     font-size: 15px;
     border: none;
+    margin-left: 10px;
     padding: 4px;
     margin-left: 10px;
 }
