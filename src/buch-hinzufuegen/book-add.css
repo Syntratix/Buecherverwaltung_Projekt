@@ -10,7 +10,6 @@ html{
 
 html, body{
     padding: 0;
-    margin: 0px;
     height: 100%;
     weight: 100%;
     color: white;
@@ -39,8 +38,11 @@ html, body{
 }
 
 .container{
-    margin: 0%;
-    padding: 0%;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+    width:100%;
+    max-width:100%;
 }
 
 .listButton{
@@ -66,10 +68,12 @@ html, body{
 }
 
 .clickBtn{
+    background-color: white;
     font-size: 15px;
     border: none;
     margin-left: 10px;
     padding: 4px;
+    margin-left: 10px;
 }
 .searchButton{
     background-color: white;
