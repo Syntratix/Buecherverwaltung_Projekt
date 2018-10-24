@@ -1,7 +1,13 @@
 
 "use strict"
 
+
 var hinzuBtn = document.getElementById("hinzuBtn");
+
+function open(){
+    
+}
+
 var anzeigBtn= document.getElementById("anzeigBtn");
 
 function hinzufuegen() {
