@@ -49,25 +49,26 @@ html, body{
     float:left;
 }
 /*Suchbar*/
-.searchbar{
-    width:33%;
-    float:right;
-}
-.searchbarInput{
-    font-size: 15px;
-    border: none;
-    padding: 4px;
-    margin-right: 0;
-}
-.searchButton{
+.searchbar button {
     background-color: white;
     border: none;
+    cursor: pointer;
     font-size: 15px;
-    padding: 4px 10px;
+    border: none;
+    margin:0;
+    padding: 0;
 }
 
-#lupe{
+.searchbar input[type=text] {
+    font-size: 15px;
+    border: none;
+    margin-left: 10px;
+    padding: 4px;
+}
+
+.searchbar img {
     height: 20px;
+    alignment: center;
 }
 
 .liste{
@@ -86,7 +87,6 @@ html, body{
     border: none;
     margin-left: 10px;
     padding: 4px;
-    margin-left: 10px;
 }
 
 
