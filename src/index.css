@@ -5,13 +5,15 @@
 
 html{
     font-family: Segoe, sans-serif;
+<<<<<<< HEAD
     margin: 0;
 
+=======
+>>>>>>> a7924faa8130604f37ba2917a5490c6c29935843
 }
 
 html, body{
     padding: 0;
-    margin: 0;
     height: 100%;
     width: 100%;
     color: white;
@@ -40,8 +42,11 @@ html, body{
 }
 
 .container{
-    margin: 0px;
-    padding: 0px;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+    width:100%;
+    max-width:100%;
 }
 
 .listButton{
@@ -54,8 +59,22 @@ html, body{
     float:right;
 }
 .searchbarInput{
-    margin-right: 0px;
+    font-size: 15px;
+    border: none;
+    padding: 4px;
+    margin-right: 0;
 }
+.searchButton{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    padding: 4px 10px;
+}
+
+#lupe{
+    height: 20px;
+}
+
 .liste{
   width:30%;
   float: left;
@@ -67,26 +86,15 @@ html, body{
 }
 
 .clickBtn{
+
     background-color: white;
     font-size: 15px;
     border: none;
     margin-left: 10px;
     padding: 4px;
+    margin-left: 10px;
 }
-.searchButton{
-    background-color: white;
-    border: none;
-    font-size: 15px;
-    padding:4px;
-}
-#lupe{
-    height: 20px;
-}
-.searchbarInput{
-    font-size: 15px;
-    border: none;
-    padding: 4px;
-}
+
 
 .list{
   border: 5px;

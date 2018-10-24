@@ -34,3 +34,7 @@ function anzeigen() {
       ulList.appendChild(li);
     });
 }
+function suchen() {
+    var firebaseRef = firebase.database().ref();
+    var sucheingabe = document.getElementById('suchBar')
+}
