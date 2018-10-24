@@ -29,5 +29,6 @@ function anzeigen() {
     });
 }
 function suchen() {
+    var firebaseRef = firebase.database().ref();
     var sucheingabe = document.getElementById('suchBar')
 }

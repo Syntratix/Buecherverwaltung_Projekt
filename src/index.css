@@ -70,16 +70,20 @@ html, body{
     background-color: white;
     border: none;
     font-size: 15px;
-    padding:4px;
+    padding: 4px 10px;
 }
+
 #lupe{
     height: 20px;
 }
-.searchbarInput{
+
+.searchbarInput[type=text]{
     font-size: 15px;
     border: none;
     padding: 4px;
+    margin-left: 10px;
 }
+
 
 .list{
   border: 5px;
