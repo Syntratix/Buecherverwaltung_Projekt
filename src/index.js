@@ -5,7 +5,7 @@
 var hinzuBtn = document.getElementById("hinzuBtn");
 
 function open(){
-    
+
 }
 
 var anzeigBtn= document.getElementById("anzeigBtn");
@@ -36,5 +36,11 @@ function anzeigen() {
 }
 function suchen() {
     var firebaseRef = firebase.database().ref();
-    var sucheingabe = document.getElementById('suchBar')
+    var sucheingabe = document.getElementById('searchBar');
+}
+function speichern(){
+/*Fallunterscheidung zwischen Buch anlegen und neue Daten speichern und bestehende Bücher updaten
+*/
+    var firebaseRef = firebase.database().ref();
+    
 }
