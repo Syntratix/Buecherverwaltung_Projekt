@@ -58,7 +58,7 @@ html, body{
     margin-right: 0px;
 }
 .liste{
-  width:30%;
+  width:15%;
   float: left;
 }
 
@@ -103,6 +103,7 @@ html, body{
  font-family: Segoe, sans-serif;
  font-style: normal;
  padding: 2px;
+ color: black;
 }
 
 .liste li:hover {
