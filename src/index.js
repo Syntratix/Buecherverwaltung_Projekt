@@ -39,8 +39,8 @@ function suchen() {
     var sucheingabe = document.getElementById('searchBar');
 }
 function speichern(){
-/*Fallunterscheidung zwischen Buch anlegen und neue Daten speichern und bestehende Bücher updaten
-*/
-    var firebaseRef = firebase.database().ref();
-    
+/*Fallunterscheidung zwischen Buch anlegen mit neuen Daten speichern und bestehende Bücher updaten
+*/var firebaseRef = firebase.database().ref();
+//neues Buch speichern:
+
 }
