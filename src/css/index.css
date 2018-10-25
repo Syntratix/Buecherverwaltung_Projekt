@@ -1,14 +1,9 @@
 table{
-  bor
+
 }
 
 td{
-  border: 2px;
-  padding-right: 50px;
-  padding-top: 5px;
-  padding-left: 255px;
-  padding-bottom: 2px;
-  margin-left: 103px;
+  color: black;
 }
 
 thead{
@@ -16,5 +11,12 @@ thead{
 }
 
 tbody{
+  background-color: white;
 
+}
+
+.table-books{
+  width:75%;
+  height:80%;
+  margin-left: 40px;
 }

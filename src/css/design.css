@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'Segoe';
-    src: url('font/SEGOEUI.TTF') format('truetype');
+    src: url('../font/SEGOEUI.TTF') format('truetype');
 }
 
 html{
@@ -8,14 +8,9 @@ html{
 }
 
 html, body{
-    padding: 0;
     height: 100%;
     width: 100%;
     color: white;
-}
-
-.header{
-    height: 20%;
 }
 
 .background{
@@ -26,22 +21,22 @@ html, body{
     background-repeat: no-repeat;
 }
 
+.container{
+    width:100%;
+    max-width:100%;
+}
+
+.header{
+    height: 20%;
+}
+
 .title, h1{
     font-family: Arial Black, sans-serif;
     font-size: 30px;
 }
 
 .title{
-    margin-left: 20px;
     margin-top: 10px;
-}
-
-.container{
-    padding: 0;
-    margin-right: 0;
-    margin-left: 0;
-    width:100%;
-    max-width:100%;
 }
 
 .listButton{
@@ -90,7 +85,6 @@ html, body{
 }
 
 /*Dropdown*/
-
 .liste li {
  display: block;
  transition-duration: 0.5s;
@@ -137,9 +131,6 @@ ul li ul:hover {
   opacity: 1;
   display: block;
 }
-
-
-
 
 /*Größeneinstellungen für Smartphones*/
 @media (min-width: 576px){

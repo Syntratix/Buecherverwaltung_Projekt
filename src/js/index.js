@@ -18,17 +18,29 @@ function hinzufuegen() {
 
 
 //tabelle
-  function tabelle(){
-    var firebaseRefChild = firebase.database().ref().child();
+    var firebaseRefChild = firebase.database().ref().child("buecher");
 
-    firebaseRefChild.on("child_added", snap => {
+    firebaseRefChild.on("child_added", snapshot => {
 
+      var titel = snapshot.child("titel").val();
+      var autor = snapshot.child("autor").val();
+      var jahr = snapshot.child("jahr").val();
+      var isbn = snapshot.child("isbn").val();
 
+      console.log(titel);
+      var a = 2;
+      console.log(a);
+
+      $("#tablle_body").append(
+        "<tr><td>" + titel +
+        "</td><td>" + autor +
+        "</td><td>" + jahr +
+        "</td><td>" + isbn +
+        "</td></tr>"
+      );
 
     })
 
-
-  }
 
 
 //Suchen
