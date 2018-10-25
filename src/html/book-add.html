@@ -37,8 +37,7 @@
                             </div>
 
                             <div class"button">
-                              <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="../html/book-add.html"><font color="black">Buch Hinzufügen</font></a></button>
-                              <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="../html/book-add.html"><font color="black">Alle Bücher anzeigen</font></a></button>
+                              <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="../html/book-add.html"><font color="black">Speichern</font></a></button>
                           </div>
                         </div>
 
@@ -52,34 +51,55 @@
                 <div class="books container">
                     <div class="row">
                         <div class="col-md-6">
-                                    <h3> Buch: </h3>
-                                    <label for="bTitel"> Titel: </label>
-                                    <br>
-                                    <input name="Titel" id="bTitel" placeholder="Titel Eingeben..."></input>
-                                    <br>
-                                    <label for="bAutor"> Autor: </label>
-                                    <br>
-                                    <input name="Autor" id="bAutor" placeholder="Autor Eingeben..."></input>
-                                    <br>
-                                    <label for="bVerlag"> Verlag: </label>
-                                    <br>
-                                    <input name="Verlag" id="bVerlag" placeholder="Verlag Eingeben..."></input>
-                                    <br>
-                                    <label for="bAuflage"> Auflage: </label>
-                                    <br>
-                                    <input name="Auflage" id="bAuflage" placeholder="Auflage Eingeben..."></input>
-                                    <br>
-                                    <label for="bJahr"> Jahr: </label>
-                                    <br>
-                                    <input name="Jahr" id="bJahr" placeholder="Jahr Eingeben..."></input>
-                                    <br>
-                                    <label for="bISBN"> ISBN: </label>
-                                    <br>
-                                    <input name="ISBN" id="bISBN" placeholder="ISBN Eingeben..."></input>
-
+                                    <table class="table-hinzu table table-bordered">
+                                        <thead class="thead">
+                                          <tr>
+                                            <th id="testText"> Buch: </th>
+                                            <th></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="tbody-light" id="tbody_bauch">
+                                            <tr>
+                                                <td class="tbody-text"> Titel: </td>
+                                                <td class="tbody-felder"> <input class="inputField btn" name="Titel" id="bTitel" placeholder="Titel Eingeben..."></input> </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> Autor: </td>
+                                                <td class="tbody-felder"> <input class="inputField btn" name="Autor" id="bAutor" placeholder="Autor Eingeben..."></input></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> Verlag: </td>
+                                                <td class="tbody-felder"> <input class="inputField btn" name="Verlag" id="bVerlag" placeholder="Verlag Eingeben..."></input></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> Auflage: </td>
+                                                <td class="tbody-felder"> <input class="inputField btn" name="Auflage" id="bAuflage" placeholder="Auflage Eingeben..."></input></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> Jahr: </td>
+                                                <td class="tbody-felder"> <input class="inputField btn" name="Jahr" id="bJahr" placeholder="Jahr Eingeben..."></input></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> ISBN: </td>
+                                                <td class="tbody-felder"> <input class="inputField btn" name="ISBN" id="bISBN" placeholder="ISBN Eingeben..."></input></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                         </div>
+                        
                         <div class="col-md-6">
-                                    <h3> Verfügbar bei: </h3>
+                            <table class="table-hinzu table table-bordered">
+                                <thead class="thead">
+                                  <tr>
+                                    <th id="testText"> Verfügbar bei: </th>
+                                  </tr>
+                                </thead>
+                                <tbody class="tbody-light" id="tbody_bauch">
+                                    <tr>
+                                        <td class="verfuegbarBeiKlasse"><textarea class="textArea btn" name="verfuegbarBei" placeholder="Verfügbar bei..."></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
