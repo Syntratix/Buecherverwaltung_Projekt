@@ -5,22 +5,21 @@
 
 html{
     font-family: Segoe, sans-serif;
-
 }
 
 html, body{
     padding: 0;
     height: 100%;
-    weight: 100%;
+    width: 100%;
     color: white;
 }
 
 .header{
-    height: 15%;
+    height: 20%;
 }
 
 .background{
-    background-image:  url(../../edeka-logo.png), url(../../edeka-slogan.png), url(../../EDEKA_Hintergrund.jpg);
+    background-image:  url(../../pix/edeka-logo.png), url(../../pix/edeka-slogan.png), url(../../pix/EDEKA_Hintergrund.jpg);
     background-attachment: fixed;
     background-size: 45px 65px, 190px 35px,cover;
     background-position: bottom 10px left 20px, bottom 10px right 10px, center;
@@ -55,8 +54,22 @@ html, body{
     float:right;
 }
 .searchbarInput{
-    margin-right: 0px;
+    font-size: 15px;
+    border: none;
+    padding: 4px;
+    margin-right: 0;
 }
+.searchButton{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    padding: 4px 10px;
+}
+
+#lupe{
+    height: 20px;
+}
+
 .liste{
   width:15%;
   float: left;
@@ -74,24 +87,6 @@ html, body{
     margin-left: 10px;
     padding: 4px;
     margin-left: 10px;
-}
-.searchButton{
-    background-color: white;
-    border: none;
-    font-size: 15px;
-    padding:4px;
-}
-#lupe{
-    height: 20px;
-}
-.searchbarInput{
-    font-size: 15px;
-    border: none;
-    padding: 4px;
-}
-
-.list{
-  border: 5px;
 }
 
 /*Dropdown*/
@@ -144,10 +139,7 @@ ul li ul:hover {
 }
 
 
-.row{
-    margin-top: 20px;
-    margin-left: 25px;
-}
+
 
 /*Größeneinstellungen für Smartphones*/
 @media (min-width: 576px){

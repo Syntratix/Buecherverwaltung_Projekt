@@ -5,11 +5,12 @@
             <title>index</title>
 
             <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
-            <script src="database.js" rel="datenbank"></script>
+            <script src="js/database.js" rel="datenbank"></script>
 
             <script src="bootstrap/js/bootstrap.min.js"></script>
             <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-            <link href="index.css" rel="stylesheet">
+            <link href="css/css.css" rel="stylesheet">
+            <link href="css/index.css" rel="stylesheet">
 
         </head>
 
@@ -31,27 +32,37 @@
                           </ul>
                         </div>
                         <div class"button">
-                            <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="buch-hinzufuegen/book-add.html"><font color="black">Buch Hinzufügen</font></a></button>
-                            <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="buch-hinzufuegen/book-add.html"><font color="black">Alle Bücher anzeigen</font></a></button>
+                            <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="html/book-add.html"><font color="black">Buch Hinzufügen</font></a></button>
+                            <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="html/book-add.html"><font color="black">Alle Bücher anzeigen</font></a></button>
                          </div>
                          </div>
                     <div class="searchbar form-control-sm">
                         <form>
                             <input type="text" class="searchbarInput form-control-sm" id="suchBar" placeholder="Buch suchen.."/>
-                            <button class="searchButton btn" type="submit"><img id=lupe src="../lupe3.png"/></button>
+                            <button class="searchButton btn" type="submit"><img id=lupe src="../pix/lupe3.png"/></button>
                         </form>
                     </div>
                     </div>
                 </div>
 
                 <div class="books">
+                  <table>
+                      <thead>
+                        <tr>
+                          <td>Titel</td>
+                          <td>Autor</td>
+                          <td>Jahr</td>
+                          <td>ISBN</td>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                  <ul id="list">
 
-                  </ul>
+                    </tbody>
+                  </table>
 
                 </div>
         </body>
 
-        <script src="index.js" rel="funktionen"></script>
+        <script src="js/index.js" rel="funktionen"></script>
     </html>
