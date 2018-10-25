@@ -71,7 +71,7 @@ html, body{
 }
 
 .liste{
-  width:30%;
+  width:20%;
   float: left;
 }
 
@@ -87,11 +87,6 @@ html, body{
     margin-left: 10px;
     padding: 4px;
     margin-left: 10px;
-}
-
-
-.list{
-  border: 5px;
 }
 
 /*Dropdown*/
