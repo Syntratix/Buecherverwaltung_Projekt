@@ -4,14 +4,14 @@
             <meta charset="utf-8">
             <title>index</title>
 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
             <script src="js/database.js" rel="datenbank"></script>
 
             <script src="bootstrap/js/bootstrap.min.js"></script>
             <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-            <link href="css/css.css" rel="stylesheet">
+            <link href="css/design.css" rel="stylesheet">
             <link href="css/index.css" rel="stylesheet">
-
         </head>
 
         <body class="background container" >
@@ -21,42 +21,41 @@
                     </div>
                     <div class="actionbar">
                         <div class="listButton">
-                        <div class ="liste">
-                          <ul>
-                              <li class="list-group-item">Main Anzeige
+                            <div class ="liste">
                                 <ul>
-                                  <li class="list-group-item">Erster Eintrag</li>
-                                  <li class="list-group-item">Zweiter Eintrag</li>
-                              </ul>
-                             </li>
-                          </ul>
+                                  <li class="list-group-item">Main Anzeige
+                                    <ul>
+                                      <li class="list-group-item">Erster Eintrag</li>
+                                      <li class="list-group-item">Zweiter Eintrag</li>
+                                    </ul>
+                                  </li>
+                               </ul>
+                            </div>
+                            <div class"button">
+                                <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="html/book-add.html"><font color="black">Buch Hinzufügen</font></a></button>
+                                <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="html/book-add.html"><font color="black">Alle Bücher anzeigen</font></a></button>
+                             </div>
                         </div>
-                        <div class"button">
-                            <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="html/book-add.html"><font color="black">Buch Hinzufügen</font></a></button>
-                            <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="html/book-add.html"><font color="black">Alle Bücher anzeigen</font></a></button>
-                         </div>
-                         </div>
-                    <div class="searchbar">
-                        <form>
-                            <input type="text" class="searchbarInput form-control-sm" id="suchBar" placeholder="Buch suchen.."/>
-                            <button class="searchButton btn" type="submit"><img id=lupe src="../pix/lupe3.png"/></button>
-                        </form>
-                    </div>
+                        <div class="searchbar">
+                            <form>
+                                <input type="text" class="searchbarInput form-control-sm" id="suchBar" placeholder="Buch suchen.."/>
+                                <button class="searchButton btn" type="submit"><img id=lupe src="../pix/lupe3.png"/></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
                 <div class="books">
-                  <table class="table-books">
-                      <thead>
+                  <table class="table-books table table-bordered">
+                      <thead class="thead-dark">
                         <tr>
-                          <td>Titel</td>
-                          <td>Autor</td>
-                          <td>Jahr</td>
-                          <td>ISBN</td>
+                          <th scope='col'>Titel</th>
+                          <th scope='col'>Autor</th>
+                          <th scope='col'>Jahr</th>
+                          <th scope='col'>ISBN</th>
                         </tr>
                     </thead>
-                    <tbody>
-
+                    <tbody id="tablle_body" class="tbody-light">
 
                     </tbody>
                   </table>
