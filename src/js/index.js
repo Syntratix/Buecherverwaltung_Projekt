@@ -93,9 +93,3 @@ function getBooksByVerfügbar(){
         var tdToRemove = document.getElementById(snapshot.key);
         tdToRemove.remove();
       })
-
-//Suchen
-function suchen() {
-    var firebaseRef = firebase.database().ref();
-    var sucheingabe = document.getElementById('suchBar')
-}
