@@ -49,6 +49,19 @@ html, body{
     border: none;
     padding: 4px;
 }
+.searchbar button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    border: none;
+    margin:0;
+    padding: 1.5px 10px 1.5px 10px;
+}
+.searchbar img {
+    height: 20px;
+    alignment: center;
+}
 
 .liste{
   width:15%;
