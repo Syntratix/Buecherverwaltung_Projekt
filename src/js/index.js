@@ -79,6 +79,10 @@ function getBooksByVerfügbar(){
         "</td><td id='"+ isbnKey + childKey +"'>" + isbn +
         "</td></tr>"
       );
+});
+
+
+>>>>>>> a8da2d5675d9f7e4e7498c50ec5f57a9e82aa402
 
       firebaseRefChild.on("child_changed", snapshot => {
           var tdChanged = document.getElementById(snapshot.key);
