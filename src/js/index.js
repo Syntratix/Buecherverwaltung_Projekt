@@ -42,7 +42,7 @@ function getBooksByVerfügbar(){
     firebase.database().ref("buecher/").once('value', function(snapshot){  /*Tabelle buecher aus Datenbank auslesen*/
         document.getElementById('tablle_body').innerHTML = ""; /*Inhalte der Tabelle leeren*/
         snapshot.forEach(function(book){ /*folgenden code für alle Elemente der Tabelle ausführen*/
-            if (book.val().verfuegbar !== "") { /*bücher welche die sucheingabe enthalten anzeigen*/
+            if (book.val().verfuegbar !== "") { /*bücher bei denen das Textfeld verfügbarbei nicht leer ist*/
                 $("#tablle_body").append(
                   "<tr><td>" + book.val().titel + /*ab hier Angezeigte Tabelle mit werten beladen*/
                   "</td><td>" + book.val().autor +
