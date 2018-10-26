@@ -93,7 +93,6 @@ function getBooksByVerfügbar(){
         var tdToRemove = document.getElementById(snapshot.key);
         tdToRemove.remove();
       })
-
     })
 
 
