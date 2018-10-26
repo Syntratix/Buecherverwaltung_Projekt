@@ -81,8 +81,6 @@ function getBooksByVerfügbar(){
       );
 });
 
-
-
       firebaseRefChild.on("child_changed", snapshot => {
           var tdChanged = document.getElementById(snapshot.key);
           location.reload(true);
