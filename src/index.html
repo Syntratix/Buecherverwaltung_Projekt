@@ -14,7 +14,7 @@
             <link href="css/index.css" rel="stylesheet">
         </head>
 
-        <body class="background container" >
+        <body class="background container">
                 <div class="header">
                     <div class="title">
                         <h1> Bücherverwaltung </h1>
@@ -32,15 +32,13 @@
                                </ul>
                             </div>
                             <div class"button">
-                                <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="html/book-add.html"><font color="black">Buch Hinzufügen</font></a></button>
-                                <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="html/book-add.html"><font color="black">Alle Bücher anzeigen</font></a></button>
+                                <a href="html/book-add.html"><button class="clickBtn btn" id= "anzeigBtn" type="button"><font color="black">Buch Hinzufügen</font></button></a>
+                                <button class="clickBtn btn" id= "alleAnzeigBtn" onClick="getBooksByTitle('')" type="button"><font color="black">Alle Bücher anzeigen</font></button>
+                                <button class="clickBtn btn" id= "verfuegbarBtn" onClick="getBooksByVerfügbar('')" type="button"><font color="black">Verfügbare Anzeigen</font></button>
                              </div>
                         </div>
                         <div class="searchbar">
-                            <form>
-                                <input type="text" class="searchbarInput form-control-sm" id="suchBar" placeholder="Buch suchen.."/>
-                                <button class="searchButton btn" type="submit"><img id=lupe src="../pix/lupe3.png"/></button>
-                            </form>
+                                <input type="text" class="searchbarInput form-control-sm" id="suchBar" placeholder="Buch suchen.."/><button class="searchButton btn" onClick="searchBooks()" type="submit"><img id=lupe src="../pix/lupe3.png" alt="Suchen"/></button>
                         </div>
                     </div>
                 </div>
