@@ -94,10 +94,6 @@ function getBooksByVerfügbar(){
         tdToRemove.remove();
       })
 
-    })
-
-
-
 //Suchen
 function suchen() {
     var firebaseRef = firebase.database().ref();
