@@ -79,7 +79,7 @@ function getBooksByVerfügbar(){
         "</td><td id='"+ isbnKey + childKey +"'>" + isbn +
         "</td></tr>"
       );
-})
+});
 
 
 
