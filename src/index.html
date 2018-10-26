@@ -7,8 +7,8 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
             <script src="js/database.js" rel="datenbank"></script>
-
             <script src="bootstrap/js/bootstrap.min.js"></script>
+
             <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
             <link href="css/design.css" rel="stylesheet">
             <link href="css/index.css" rel="stylesheet">
@@ -38,7 +38,9 @@
                              </div>
                         </div>
                         <div class="searchbar">
-                                <input type="text" class="searchbarInput form-control-sm" id="suchBar" placeholder="Buch suchen.."/><button class="searchButton btn" onClick="searchBooks()" type="submit"><img id=lupe src="../pix/lupe3.png" alt="Suchen"/></button>
+                                <form action="#" onsubmit="searchBooks()">
+                                    <input type="text" class="searchbarInput form-control-sm" id="suchBar" placeholder="Buch suchen.."/>
+                                </form>
                         </div>
                     </div>
                 </div>

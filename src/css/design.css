@@ -44,26 +44,10 @@ html, body{
     float:left;
 }
 /*Suchbar*/
-.searchbar button {
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 17px;
-    border: none;
-    margin:0;
-    padding: 1.5px 10px 1.5px 10px;
-}
-
-.searchbar input[type=text] {
+.searchbar input {
     font-size: 15px;
     border: none;
-    margin-left: 10px;
     padding: 4px;
-}
-
-.searchbar img {
-    height: 20px;
-    alignment: center;
 }
 
 .liste{
