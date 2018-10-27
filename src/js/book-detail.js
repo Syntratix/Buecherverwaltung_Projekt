@@ -1,5 +1,11 @@
 "use strict"
 
+var aktuelleHTMLSeite;
+
+function getchildkey(key){
+    aktuelleHTMLSeite=key;
+}
+
 function detailBuch() {
     firebase.database().ref("buecher/").once('value', function(snapshot){  /*Tabelle buecher aus Datenbank auslesen*/
                 $("#tbody_bauch").append(
