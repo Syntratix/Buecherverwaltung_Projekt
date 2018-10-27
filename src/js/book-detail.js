@@ -1,10 +1,14 @@
 "use strict"
 
-var aktuelleHTMLSeite;
+var aktHTMLSeite = 0;
 
-function getchildkey(key){
+function getChildKey(key){
     aktuelleHTMLSeite=key;
+
 }
+
+
+    console.log(aktHTMLSeite);
 
 function detailBuch() {
     firebase.database().ref("buecher/").once('value', function(snapshot){  /*Tabelle buecher aus Datenbank auslesen*/
