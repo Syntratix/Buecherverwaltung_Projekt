@@ -65,8 +65,8 @@ function getBooksByVerfügbar(){
       var isbnKey = snapshot.child("isbn").key;
 
       $("#tablle_body").append(
-        "<tr id='"+ childKey +"'><td id='"+ titelKey + childKey +"'>" + titel +
-        "</td><td id='"+ autorKey + childKey +"'>" + autor +
+        "<tr id='"+ childKey +"'><td id='"+ titelKey + childKey +"'><a href='html/book-detail.html'>" + titel +
+        "</a></td><td id='"+ autorKey + childKey +"'>" + autor +
         "</td><td id='"+ jahrKey + childKey +"'>" + jahr +
         "</td><td id='"+ isbnKey + childKey +"'>" + isbn +
         "</td></tr>"
