@@ -48,45 +48,52 @@
                     </div>
                 </div>
 
-                <div class="books container">
+                <!--Hier Hauptteil der Seite, die Bootstrap Tabelle wird erstellt-->
+                <div class="books container-fluid">
                     <div class="row">
                         <div class="col-md-6">
+                            <!--Als Erstes der Kopf der Tabelle mit "thead"-->
                                     <table class="table-hinzu table table-bordered">
                                         <thead class="thead">
                                           <tr>
-                                            <th id="testText"> Buch: </th>
-                                            <th></th>
+                                            <th id="testText" colspan="2"> Buch: </th>
                                           </tr>
                                         </thead>
+                                        <!--Hier wird der Hauptteil der Tabelle generiert und mit Inputfelder bestückt-->
                                         <tbody class="tbody-light" id="tbody_bauch">
                                             <tr>
                                                 <td class="tbody-text"> Titel: </td>
-                                                <td class="tbody-felder"> <input class="inputField btn" name="Titel" id="bTitel" placeholder="Titel Eingeben..."></input> </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Titel" id="bTitel" placeholder="Titel Eingeben..."></input> </td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Autor: </td>
-                                                <td class="tbody-felder"> <input class="inputField btn" name="Autor" id="bAutor" placeholder="Autor Eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Autor" id="bAutor" placeholder="Autor Eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Verlag: </td>
-                                                <td class="tbody-felder"> <input class="inputField btn" name="Verlag" id="bVerlag" placeholder="Verlag Eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Verlag" id="bVerlag" placeholder="Verlag Eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Auflage: </td>
-                                                <td class="tbody-felder"> <input class="inputField btn" name="Auflage" id="bAuflage" placeholder="Auflage Eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Auflage" id="bAuflage" placeholder="Auflage Eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Jahr: </td>
-                                                <td class="tbody-felder"> <input class="inputField btn" name="Jahr" id="bJahr" placeholder="Jahr Eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Jahr" id="bJahr" placeholder="Jahr Eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> ISBN: </td>
-                                                <td class="tbody-felder"> <input class="inputField btn" name="ISBN" id="bISBN" placeholder="ISBN Eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="ISBN" id="bISBN" placeholder="ISBN Eingeben..."></input></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> Kategorie: </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Kategorie" id="bKategorie" placeholder="Kategorie Eingeben..."></input></td>
                                             </tr>
                                         </tbody>
                                     </table>
                         </div>
 
+                        <!--Hier wird die rechte Tabelle generiert die für die Kategorie "Verfübar bei" zuständig ist-->
                         <div class="col-md-6">
                             <table class="table-hinzu table table-bordered">
                                 <thead class="thead">
@@ -96,14 +103,34 @@
                                 </thead>
                                 <tbody class="tbody-light" id="tbody_bauch">
                                     <tr>
-                                        <td class="verfuegbarBeiKlasse"><textarea class="textArea btn" name="verfuegbarBei" placeholder="Verfügbar bei..."></textarea></td>
+                                        <td class="md-form verfuegbarBeiKlasse">
+                                            <i class="fa fa-pencil prefix"></i>
+                                            <textarea class="md-textarea form-control" type="text"  name="verfuegbarBei" id="verfuegbarField" rows="12"></textarea>
+                                            <label for="verfuegbarField"> Eingabe... </label>
+                                        </td>
+
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+
         </body>
+        <!-- Der Gesamte Footer als Testbereich erstellt wegen Slogan und Logo, sollte vorerst nicht in andere Dateien übernommen werden-->
+        <footer class"fixed-bottom">
+            <div class="footer fixed-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--<img id=logo src="../../pix/edeka-logo.png" alt="Logo" align="left"/>-->
+                    </div>
+                    <div class="col-md-6">
+                        <!--<img id=slogan src="../../pix/edeka-slogan.png" als="Slogan" align="right"/>-->
+                    </div>
+                <div>
+            </div>
+
+        </footer>
 
         <script src="../js/book-add.js" rel="funktionen"></script>
     </html>

@@ -37,22 +37,35 @@ tbody{
 .inputField{
     padding: 0;
     margin: 0;
+    border-style: none;
 }
 
 .tbody-felder{
     padding: 0;
+    margin: 0;
 }
 
-.textArea{
-    padding: 0;
-    margin: 0;
-    weight: 100%;
-    height: 100%;
+.md-textarea{
+    border-style: none;
 }
 
-.verfuegbarBei{
+.footer{
     padding: 0;
-    margin: 0;
-    weight: 100%;
-    height: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+    height: auto;
 }
+
+/* Tests zu Slogan und Logo
+#logo{
+    width: 10%;
+    max-height: auto;
+    margin-left: 3%;
+    margin-bottom: 1%;
+}
+
+#slogan{
+
+}
+*/
