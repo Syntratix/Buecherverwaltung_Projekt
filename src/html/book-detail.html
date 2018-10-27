@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Detaillierte Buchansicht</title>
+
+            <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+            <script src="../js/database.js" rel="datenbank"></script>
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+            <script src="../bootstrap/js/bootstrap.min.js"></script>
+            <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            <link href="../css/design.css" rel="stylesheet">
+            <link href="../css/book-detail.css" rel="stylesheet">
+
+        </head>
+
+        <body class="background container" >
+                <div class="header">
+
+                    <div class="title">
+                        <h1>Bücherverwaltung</h1>
+                    </div>
+
+                    <div class="actionbar">
+                        <div class="listButton">
+                            <div class = "liste">
+                                <ul >
+                                    <li class="list-group-item"> Main Anzeige
+                                        <ul>
+                                            <li class="list-group-item">Erster Eintrag</li>
+                                            <li class="list-group-item">Zweiter Eintrag</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class"button">
+                              <button class="clickBtn btn" id= "saveBtn" onClick="speichern()" type="button"><font color="black">Speichern</font></button>
+                              <button class="clickBtn btn" id= "deleteBtn" onClick="loeschen()" type="button"><font color="black">Buch löschen</font></button>
+                          </div>
+                        </div>
+
+                        <div class="searchbar">
+                            <input class="searchbarInput form-control-sm" type="text" placeholder="Buch suchen.."></input>
+                            <button class="searchButton btn" id=suchButton type="button"><img id=lupe src="../../pix/lupe3.png"/></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Hier Hauptteil der Seite, die Bootstrap Tabelle wird erstellt-->
+                <div class="books container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!--Als Erstes der Kopf der Tabelle mit "thead"-->
+                                    <table class="table-hinzu table table-bordered">
+                                        <thead class="thead">
+                                          <tr>
+                                            <th id="testText" colspan="2"> Buch: </th>
+                                          </tr>
+                                        </thead>
+                                        <!--Hier wird der Hauptteil der Tabelle generiert und mit Inputfelder bestückt-->
+                                        <tbody class="tbody-light" id="tbody_bauch">
+                                            <tr>
+                                                <td class="tbody-text"> Titel: </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="text" name="Titel" id="bTitel" readonly></input> </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> Autor: </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Autor" id="bAutor" readonly></input></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> Verlag: </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Verlag" id="bVerlag" readonly></input></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> Auflage: </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Auflage" id="bAuflage" readonly></input></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> Jahr: </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="" name="Jahr" id="bJahr" readonly></input></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> ISBN: </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="text" name="ISBN" id="bISBN" readonly></input></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbody-text"> Kategorie: </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="text" name="Kategorie" id="bKategorie" readonly></input></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                        </div>
+
+                        <!--Hier wird die rechte Tabelle generiert die für die Kategorie "Verfübar bei" zuständig ist-->
+                        <div class="col-md-6">
+                            <table class="table-hinzu table table-bordered">
+                                <thead class="thead">
+                                  <tr>
+                                    <th id="testText"> Verfügbar bei: </th>
+                                  </tr>
+                                </thead>
+                                <tbody class="tbody-light" id="verfuegbarFeld">
+                                    <tr>
+                                        <td class="md-form verfuegbarBeiKlasse">
+                                            <i class="fa fa-pencil prefix"></i>
+                                            <textarea class="md-textarea form-control" type="text"  name="verfuegbarBei" id="verfuegbarField" rows="12"></textarea>
+                                            <label for="verfuegbarField"> Eingabe... </label>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            <script src="../js/book-detail.js" rel="funktionen"></script>
+</html>
