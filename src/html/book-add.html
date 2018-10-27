@@ -37,7 +37,7 @@
                             </div>
 
                             <div class"button">
-                              <button class="clickBtn btn" id= "anzeigBtn" onClick="anzeigen()" type="button"><a href="../html/book-add.html"><font color="black">Speichern</font></a></button>
+                              <button class="clickBtn btn" id= "saveBtn" onClick="speichern()" type="button"><font color="black">Speichern</font></button>
                           </div>
                         </div>
 
@@ -63,7 +63,7 @@
                                         <tbody class="tbody-light" id="tbody_bauch">
                                             <tr>
                                                 <td class="tbody-text"> Titel: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" name="Titel" id="bTitel" placeholder="Titel Eingeben..."></input> </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="text" name="Titel" id="bTitel" placeholder="Titel Eingeben..."></input> </td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Autor: </td>
@@ -79,15 +79,23 @@
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Jahr: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" name="Jahr" id="bJahr" placeholder="Jahr Eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="" name="Jahr" id="bJahr" placeholder="Jahr Eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> ISBN: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" name="ISBN" id="bISBN" placeholder="ISBN Eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="text" pattern="\d{10}|\d{13}|(97[89]-)?(?=.{13}$)(\d+-){3}\d" name="ISBN" id="bISBN" placeholder="ISBN Eingeben..."></input>
+                                                    <span class="validity"></span>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Kategorie: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" name="Kategorie" id="bKategorie" placeholder="Kategorie Eingeben..."></input></td>
+                                                <td class="tbody-felder">
+                                                    <select class="custom-select" id="inputGroupSelect01">
+                                                        <option value="1"> BWL </option>
+                                                        <option value="2"> IT </option>
+                                                    </select>
+                                                </td>
+
                                             </tr>
                                         </tbody>
                                     </table>

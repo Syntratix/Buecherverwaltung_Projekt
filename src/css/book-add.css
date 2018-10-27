@@ -49,6 +49,10 @@ tbody{
     border-style: none;
 }
 
+#inputGroupSelect01{
+    border-style: none;
+}
+
 .footer{
     padding: 0;
     margin-top: 1%;
