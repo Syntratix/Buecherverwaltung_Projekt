@@ -1,0 +1,65 @@
+.row{
+    margin-top: 20px;
+    margin-left: 25px;
+}
+tbody{
+    background-color: white;
+
+}
+
+.tbody-text{
+    color: black;
+}
+
+.thead{
+    background-color: rgb(242, 242, 60);
+
+}
+
+#testText{
+    color: rgb(0,99,175);
+    font-size: 150%;
+}
+
+.tbody-text{
+    margin: 0;
+    width: 25%;
+}
+
+.table-hinzu{
+    height: 100%;
+}
+
+.col-mid-6{
+    height: 75%;
+}
+
+.inputField{
+    padding: 0;
+    margin: 0;
+    border-style: none;
+}
+
+.tbody-felder{
+    padding: 0;
+    margin: 0;
+}
+
+.md-textarea{
+    border-style: none;
+}
+
+#inputGroupSelect01{
+    border-style: none;
+}
+
+.footer{
+    padding: 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+    height: auto;
+}
+#deleteBtn{
+    margin-left: 6px;
+}
