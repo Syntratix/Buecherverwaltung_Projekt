@@ -21,7 +21,7 @@ function getBooksByTitle(titel){
         snapshot.forEach(function(book){ /*folgenden code für alle Elemente der Tabelle ausführen*/
             if (book.val().titel.toLowerCase().includes(titel.toLowerCase())) { /*bücher welche die sucheingabe enthalten anzeigen*/
                 $("#tablle_body").append(
-                  "<tr><td>" + book.val().titel + /*ab hier Angezeigte Tabelle mit werten beladen*/
+                  "<tr><td><a href='html/book-detail.html'>" + book.val().titel + /*ab hier Angezeigte Tabelle mit werten beladen*/
                   "</td><td>" + book.val().autor +
                   "</td><td>" + book.val().jahr +
                   "</td><td>" + book.val().isbn +
@@ -38,7 +38,7 @@ function getBooksByVerfügbar(){
         snapshot.forEach(function(book){ /*folgenden code für alle Elemente der Tabelle ausführen*/
             if (book.val().verfuegbar !== "") { /*bücher welche die sucheingabe enthalten anzeigen*/
                 $("#tablle_body").append(
-                  "<tr><td>" + book.val().titel + /*ab hier Angezeigte Tabelle mit werten beladen*/
+                  "<tr><td><a href='html/book-detail.html'>" + book.val().titel + /*ab hier Angezeigte Tabelle mit werten beladen*/
                   "</td><td>" + book.val().autor +
                   "</td><td>" + book.val().jahr +
                   "</td><td>" + book.val().isbn +
