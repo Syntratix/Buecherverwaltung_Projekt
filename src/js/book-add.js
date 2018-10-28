@@ -24,3 +24,19 @@ function save(){
         verfuegbar: bText
     });
 }
+
+
+var bISBN = document.getElementById('bISBN');
+
+
+bISBN.onblur = function(){
+    var isbnIsValid = require('isbn-validator');
+
+
+    if(isbnIsValid(this.value)){
+        this.classList.add("error");
+    }
+    else{
+        this.classList.remove("error");
+    }
+}
