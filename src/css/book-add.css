@@ -53,13 +53,39 @@ tbody{
     border-style: none;
 }
 
-input:invalid{
-    background: hsla(0,90%,70%,1);
+.error{
+    background-color: red;
 }
 
-input:valid{
-    background: hsla(100,90%,70%,1);
+/*Entfernen der Auswahlpfeile in Number Input Feld*/
+input[type='number']{
+    -moz-appearance:textfield;
 }
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+/*
+input[value=""] + span:after{
+    content: "";
+}
+
+input:invalid + span:after{
+    content: "\2713";
+    color: limegreen;
+}
+
+input:valid + span:after{
+    content: "X";
+    color: #ce0000;
+}
+*/
 
 .footer{
     padding: 0;

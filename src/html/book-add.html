@@ -9,6 +9,7 @@
 
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+            <script src="../node_modules/test/isbn-validate.js"></script>
             <script src="../bootstrap/js/bootstrap.min.js"></script>
             <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
             <link href="../css/design.css" rel="stylesheet">
@@ -37,7 +38,7 @@
                             </div>
 
                             <div class"button">
-                              <button class="clickBtn btn" id= "saveBtn" onClick="speichern()" type="button"><font color="black">Speichern</font></button>
+                              <button class="clickBtn btn" id= "saveBtn" onClick="save()" type="button"><font color="black">Speichern</font></button>
                           </div>
                         </div>
 
@@ -63,36 +64,35 @@
                                         <tbody class="tbody-light" id="tbody_bauch">
                                             <tr>
                                                 <td class="tbody-text"> Titel: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" type="text" name="Titel" id="bTitel" placeholder="Titel Eingeben..."></input> </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="text" name="Titel" id="bTitel" placeholder="Titel eingeben..."></input> </td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Autor: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" name="Autor" id="bAutor" placeholder="Autor Eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Autor" id="bAutor" placeholder="Autor eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Verlag: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" name="Verlag" id="bVerlag" placeholder="Verlag Eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Verlag" id="bVerlag" placeholder="Verlag eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Auflage: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" name="Auflage" id="bAuflage" placeholder="Auflage Eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" name="Auflage" id="bAuflage" placeholder="Auflage eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Jahr: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" type="" name="Jahr" id="bJahr" placeholder="Jahr Eingeben..." required></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="" name="Jahr" id="bJahr" placeholder="Jahr eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> ISBN: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" type="text" pattern="\d{10}|\d{13}|(97[89]-)?(?=.{13}$)(\d+-){3}\d" name="ISBN" id="bISBN" placeholder="ISBN Eingeben..." required></input>
-                                                    <span class="validity"></span>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="number"  name="ISBN" id="bISBN" placeholder="ISBN ohne Bindestriche eingeben..."></input>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Kategorie: </td>
                                                 <td class="tbody-felder">
-                                                    <select class="custom-select" id="inputGroupSelect01">
-                                                        <option value="1"> BWL </option>
-                                                        <option value="2"> IT </option>
+                                                    <select class="custom-select" id="katWahl">
+                                                        <option value="BWL"> BWL </option>
+                                                        <option value="IT"> IT </option>
                                                     </select>
                                                 </td>
 
