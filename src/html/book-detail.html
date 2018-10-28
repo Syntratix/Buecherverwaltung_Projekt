@@ -10,6 +10,7 @@
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
             <script src="../bootstrap/js/bootstrap.min.js"></script>
+            <script src="../js/book-detail.js" rel="funktionen"></script>
             <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
             <link href="../css/design.css" rel="stylesheet">
             <link href="../css/book-detail.css" rel="stylesheet">
@@ -38,7 +39,9 @@
 
                             <div class"button">
                               <button class="clickBtn btn" id= "saveBtn" onClick="speichern()" type="button"><font color="black">Speichern</font></button>
-                              <button class="clickBtn btn" id= "deleteBtn" onClick="loeschen()" type="button"><font color="black">Buch löschen</font></button>
+                              <form name="form" action="script.php" method ="post">
+                                  <button class="clickBtn btn" id= "deleteBtn" onClick="loeschen()" type="button"><font color="black">Buch löschen</font></button>
+                              </form>
                           </div>
                         </div>
 
@@ -116,5 +119,4 @@
                         </div>
                     </div>
                 </div>
-            <script src="../js/book-detail.js" rel="funktionen"></script>
 </html>

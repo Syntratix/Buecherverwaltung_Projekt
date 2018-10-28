@@ -24,5 +24,7 @@ function detailBuch() {
 }
 
 function loeschen(){
-
+    var firebaseRef = firebase.database().ref("buecher/");
+    if(confirm("Möchten Sie das Buch wirklich löschen?") == true)
+     document.form.submit();
 }
