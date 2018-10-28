@@ -1,15 +1,6 @@
 
 "use strict"
 
-
-var anzeigBtn= document.getElementById("anzeigBtn");
-
-function hinzufuegen() {
-    var firebaseRef = firebase.database().ref();
-
-    firebaseRef.child("IT For DUMMYS").set("123456789");
-}
-
 function searchBooks() {
     var sucheingabe = document.getElementById('suchBar').value;
     getBooksByTitle(sucheingabe);
@@ -63,10 +54,11 @@ function getBooksByVerfügbar(){
       var jahrKey = snapshot.child("jahr").key;
       var isbn = snapshot.child("isbn").val();
       var isbnKey = snapshot.child("isbn").key;
+      var url = 'html/book-detail.html?ISBN='+isbn;
 
       $("#tablle_body").append(
-        "<tr id='"+ childKey +"'><td id='"+ titelKey + childKey +"'><a href='html/book-detail.html'><button onClick='getChildKey.setKey("+ childKey +")' type='button'>" + titel +
-        "</button></a></td><td id='"+ autorKey + childKey +"'>" + autor +
+        "<tr id='"+ childKey +"'><td id='"+ titelKey + childKey +"'><a href= "+url+">" + titel +
+        "</a></td><td id='"+ autorKey + childKey +"'>" + autor +
         "</td><td id='"+ jahrKey + childKey +"'>" + jahr +
         "</td><td id='"+ isbnKey + childKey +"'>" + isbn +
         "</td></tr>"

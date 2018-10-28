@@ -1,30 +1,34 @@
 "use strict"
 
-var aktuelleHTMLSeite = 0;
-
-function getChildKey(key){
-    aktuelleHTMLSeite=key;
-}
-
 function detailBuch() {
-    firebase.database().ref("buecher/").once('value', function(snapshot){  /*Tabelle buecher aus Datenbank auslesen*/
-                $("#tbody_bauch").append(
-                  "bTitel" + book.val().titel + /*ab hier Angezeigte Tabelle mit werten beladen*/
-                  "bAutor" + book.val().autor +
-                  "bVerlag" + book.val().verlag +
-                  "bAuflage" + book.val().auflage +
-                  "bJahr" + book.val().jahr +
-                  "bISBN" + book.val().isbn +
-                  "bKategorie" + book.val().kategorie
-                );
-                $("#verfuegbarFeld").append(
-                    "verfuegbarField" + book.val().verfuegbar
-                );
+    var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 6));
+    firebase.database().ref("buecher/").once('value', function(snapshot){
+        snapshot.forEach(function(book){
+         if(book.val().isbn === search){
+             document.getElementById('bTitel').value = book.val().titel;
+             document.getElementById('bAutor').value = book.val().autor;
+             document.getElementById('bVerlag').value = book.val().verlag;
+             document.getElementById('bAuflage').value = book.val().isbn;
+             document.getElementById('bJahr').value = book.val().jahr;
+             document.getElementById('bISBN').value = book.val().isbn;
+             document.getElementById('bKategorie').value = book.val().kategorie;
+             document.getElementById('verfuegbarField').value = book.val().verfuegbar;
+         }
+     })
     });
 }
 
 function loeschen(){
     var firebaseRef = firebase.database().ref("buecher/");
-    if(confirm("Möchten Sie das Buch wirklich löschen?") == true)
-     document.form.submit();
+    if(confirm("Möchten Sie das Buch wirklich löschen?") == true){
+    var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 6));
+    firebase.database().ref("buecher/").once('value', function(snapshot){
+        snapshot.forEach(function(book){
+         if(book.val().isbn === search){
+            book.remove();
+         }
+     })
+    });
+    document.location.href="../index.html";
+}
 }

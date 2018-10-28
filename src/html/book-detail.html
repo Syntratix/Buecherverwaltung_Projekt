@@ -16,7 +16,7 @@
 
         </head>
 
-        <body class="background container" >
+        <body class="background container" onload="detailBuch();" >
                 <div class="header">
 
                     <div class="title">
@@ -38,9 +38,8 @@
 
                             <div class"button">
                               <button class="clickBtn btn" id= "saveBtn" onClick="speichern()" type="button"><font color="black">Speichern</font></button>
-                              <form name="form" action="script.php" method ="post">
-                                  <button class="clickBtn btn" id= "deleteBtn" onClick="loeschen()" type="button"><font color="black">Buch löschen</font></button>
-                              </form>
+                              <button class="clickBtn btn" id= "deleteBtn" onClick="loeschen()" type="button"><font color="black">Buch löschen</font></button>
+
                           </div>
                         </div>
 
