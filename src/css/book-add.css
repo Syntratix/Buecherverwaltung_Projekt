@@ -10,15 +10,6 @@ tbody{
     color: black;
 }
 
-.thead{
-    background-color: rgb(242, 242, 60);
-}
-
-#testText{
-    color: rgb(0,99,175);
-    font-size: 150%;
-}
-
 .tbody-text{
     margin: 0;
     width: 25%;
