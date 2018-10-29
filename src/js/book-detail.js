@@ -1,7 +1,9 @@
 "use strict"
 
+var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 6));
+var firebaseRef = firebase.database().ref("buecher/");
+
 function detailBuch() {
-    var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 6));
     firebase.database().ref("buecher/").once('value', function(snapshot){
         snapshot.forEach(function(book){
          if(book.val().isbn === search){
@@ -19,16 +21,9 @@ function detailBuch() {
 }
 
 function loeschen(){
-    var firebaseRef = firebase.database().ref("buecher/");
     if(confirm("Möchten Sie das Buch wirklich löschen?") == true){
-    var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 6));
-    firebase.database().ref("buecher/").once('value', function(snapshot){
-        snapshot.forEach(function(book){
-         if(book.val().isbn === search){
-            book.remove();
-         }
-     })
-    });
-    document.location.href="../index.html";
-}
+      var boook = document.getElementById(search);
+      boook.ref.remove();
+      document.location.href="../index.html";
+    }
 }
