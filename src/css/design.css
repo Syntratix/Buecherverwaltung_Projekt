@@ -13,6 +13,11 @@ html, body{
     color: white;
 }
 
+.thead{
+    background-color: rgb(242, 242, 60);
+
+}
+
 .background{
     background-image:  url(../../pix/edeka-logo.png), url(../../pix/edeka-slogan.png), url(../../pix/EDEKA_Hintergrund.jpg);
     background-attachment: fixed;
