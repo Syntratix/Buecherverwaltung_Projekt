@@ -4,29 +4,42 @@
 //Methode zum speichern des Buches
 
 function save(){
-    var bISBN = document.getElementById('bISBN').value;
-    var saveBtn = document.getElementById("saveBtn");
-    var bTitel = document.getElementById("bTitel").value;
-    var bAutor = document.getElementById("bAutor").value;
-    var bJahr = document.getElementById("bJahr").value;
-    var bAuflage = document.getElementById("bAuflage").value;
-    var bVerlag = document.getElementById("bVerlag").value;
-    var bKat = document.getElementById("katWahl").value;
-    var bText = document.getElementById("verfuegbarField").value;
 
-    var firebaseRef = firebase.database().ref('buecher/');
+    let getAllErrors = document.getElementsByClassName('error');
+    if(getAllErrors.length < 1){
 
-    firebaseRef.child(bISBN).set({
-        auflage: bAuflage,
-        autor: bAutor,
-        isbn: bISBN,
-        jahr: bJahr,
-        kategorie: bKat,
-        titel: bTitel,
-        verlag: bVerlag,
-        verfuegbar: bText
-    });
+        var bISBN = document.getElementById('bISBN').value;
+        var saveBtn = document.getElementById("saveBtn");
+        var bTitel = document.getElementById("bTitel").value;
+        var bAutor = document.getElementById("bAutor").value;
+        var bJahr = document.getElementById("bJahr").value;
+        var bAuflage = document.getElementById("bAuflage").value;
+        var bVerlag = document.getElementById("bVerlag").value;
+        var bKat = document.getElementById("katWahl").value;
+        var bText = document.getElementById("verfuegbarField").value;
+
+        var firebaseRef = firebase.database().ref('buecher/');
+
+        firebaseRef.child(bISBN).set({
+            auflage: bAuflage,
+            autor: bAutor,
+            isbn: bISBN,
+            jahr: bJahr,
+            kategorie: bKat,
+            titel: bTitel,
+            verlag: bVerlag,
+            verfuegbar: bText
+        });
+
+
+        alert("Buch wurde gespeichert!");
+    }
+
 }
+
+//let validateInputs = () => {
+//    let allInputs = document.querySelectorAll("input");
+//};
 
 var isbnIsValid = require('is-isbn');
 
@@ -35,8 +48,8 @@ window.addEventListener("load",()=>{
     bISBN.addEventListener("input",onIsbnInput);
     let saveBtn = document.getElementById('saveBtn');
     saveBtn.addEventListener("click", save);
-    let bAuflage = document.getElementById('bAuflage');
-    bAuflage.addEventListener("input", checkEdition);
+    let cAuflage = document.getElementById('bAuflage');
+    cAuflage.addEventListener("input", checkEdition);
 });
 
 //Methode die Gültigkeit der ISBN Checkt
@@ -45,24 +58,23 @@ let onIsbnInput =(event)=>{
     let value = event.srcElement.value;
 
     if(isbnIsValid.validate(value)){
-        getBookDetails(value);
         event.srcElement.classList.remove("error");
+        getBookDetails(value);
     }
     else{
         event.srcElement.classList.add("error");
-        onIsbnInput(value);
     }
 }
 
-let checkEdition = (event)=>{
-    let aAuflage = event.srcElement.value;
+let checkEdition = ()=>{
+    let iAuflage =  document.getElementById('bAuflage');
+    let aAuflage = iAuflage.value;
 
-    if(aAuflage == ""){
-        event.srcElement.classList.remove("error");
+    if(aAuflage != ""){
+        iAuflage.classList.remove("error");
     }
     else{
-        event.srcElement.classList.add("error");
-        checkEdition(aAuflage);
+        iAuflage.classList.add("error");
     }
 }
 
@@ -86,11 +98,13 @@ let getBookDetails = (isbn) => {
               autor += autors[i] + ", ";
           }
           document.getElementById('bAutor').value = autor;
-          document.getElementById('bJahr').value = data["items"][0].volumeInfo.publishedDate;
+
+          let year = data["items"][0].volumeInfo.publishedDate;
+          year = year.slice(0,4);
+          document.getElementById('bJahr').value = year;
           document.getElementById('bVerlag').value = data["items"][0].volumeInfo.publisher;
-          document.getElementById('bJahr').value = data["items"][0].volumeInfo.publishedDate;
 
-
+          checkEdition();
       }
   });
 }
