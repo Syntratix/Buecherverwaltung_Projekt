@@ -3,6 +3,7 @@
 //Methode zum speichern des Buches
 
 function save(){
+
     let getAllErrors = document.getElementsByClassName('error');
     if(getAllErrors.length < 1){
 
@@ -28,9 +29,6 @@ function save(){
             verlag: bVerlag,
             verfuegbar: bText
         });
-
-
-
 
         nsave.then(() => {
           document.location.href="../index.html";
