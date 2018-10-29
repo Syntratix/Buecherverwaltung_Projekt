@@ -16,14 +16,15 @@ function detailBuch() {
              document.getElementById('bKategorie').value = book.val().kategorie;
              document.getElementById('verfuegbarField').value = book.val().verfuegbar;
          }
-     })
+       })
     });
 }
 
 function loeschen(){
     if(confirm("Möchten Sie das Buch wirklich löschen?") == true){
-      var boook = document.getElementById(search);
-      boook.ref.remove();
-      document.location.href="../index.html";
+      let promise = firebase.database().ref("buecher/" + search).remove();
+      promise.then(() => {
+        document.location.href="../index.html";
+      });
     }
 }
