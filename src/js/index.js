@@ -126,6 +126,6 @@ function buttonChanger(){
     }
     if(beschriftung === "Alle Bücher anzeigen"){
         document.getElementById("wechselButton").value="Verfügbare Bücher anzeigen";
-        reLoadTabel(2);
+        loadTabel();
     }
 }
