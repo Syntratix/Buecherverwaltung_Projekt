@@ -7,12 +7,6 @@ html{
     font-family: Segoe, sans-serif;
 }
 
-html, body{
-    height: 100%;
-    width: 100%;
-    color: white;
-}
-
 .thead{
     background-color: #FFE842;
 }
@@ -20,6 +14,14 @@ html, body{
 #testText{
     color: #0063AF;
     font-size: 150%;
+}
+
+.logoGrenze{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width:100%;
+  display: block;
 }
 
 .background{
@@ -31,8 +33,8 @@ html, body{
 }
 
 .container{
-    width:100%;
     max-width:100%;
+    overflow: initial;
 }
 
 .header{
@@ -181,6 +183,11 @@ ul li ul:hover {
     .title{
         margin-left: 20px;
     }
+
+    .container{
+      margin-bottom: 90px;
+    }
+
 }
 
 /* Größeneinstellungen für Tabletgröße*/
@@ -196,6 +203,10 @@ ul li ul:hover {
 
     .title{
         margin-left: 30px;
+    }
+
+    .container{
+      margin-bottom: 140px;
     }
 }
 
@@ -213,4 +224,6 @@ ul li ul:hover {
     .title{
         margin-left: 30px;
     }
+
+
  }
