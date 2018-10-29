@@ -42,6 +42,7 @@ function delTabel(){
 //                  "</td></tr>"
 //                );
 //            }
+
 //        })
 //    });
 //}
@@ -120,3 +121,15 @@ firebaseRefChild.on("child_removed", snapshot => {
   var tdToRemove = document.getElementById(snapshot.key);
   tdToRemove.remove();
 })
+
+function buttonChanger(){
+    var beschriftung = document.getElementById("wechselButton").value;
+    if(beschriftung === "Verfügbare Bücher anzeigen"){
+        document.getElementById("wechselButton").value="Alle Bücher anzeigen";
+        reLoadTabel(1);
+    }
+    if(beschriftung === "Alle Bücher anzeigen"){
+        document.getElementById("wechselButton").value="Verfügbare Bücher anzeigen";
+        reLoadTabel(2);
+    }
+}
