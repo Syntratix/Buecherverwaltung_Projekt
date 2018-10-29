@@ -4,7 +4,6 @@
 }
 tbody{
     background-color: white;
-
 }
 
 .tbody-text{
@@ -48,7 +47,7 @@ tbody{
     border-style: none;
 }
 
-#inputGroupSelect01{
+#katWahl{
     border-style: none;
 }
 
@@ -67,24 +66,6 @@ input[type=number]::-webkit-outer-spin-button{
     -webkit-appearance: none;
     margin: 0;
 }
-
-
-
-/*
-input[value=""] + span:after{
-    content: "";
-}
-
-input:invalid + span:after{
-    content: "\2713";
-    color: limegreen;
-}
-
-input:valid + span:after{
-    content: "X";
-    color: #ce0000;
-}
-*/
 
 .footer{
     padding: 0;

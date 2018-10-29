@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "is-isbn": "^1.1.0",
     "isbn-validate": "^1.0.3",
     "isbn-validator": "^1.2.0"
   }

@@ -7,9 +7,9 @@
             <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
             <script src="../js/database.js" rel="datenbank"></script>
 
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-            <script src="../node_modules/test/isbn-validate.js"></script>
+            <script src="../js/book-add_bundle.js"></script>
             <script src="../bootstrap/js/bootstrap.min.js"></script>
             <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
             <link href="../css/design.css" rel="stylesheet">
@@ -28,10 +28,10 @@
                         <div class="listButton">
                             <div class = "liste">
                                 <ul >
-                                    <li class="list-group-item"> Main Anzeige
+                                    <li class="list-group-item" id="mainKat"> Kategorie
                                         <ul>
-                                            <li class="list-group-item">Erster Eintrag</li>
-                                            <li class="list-group-item">Zweiter Eintrag</li>
+                                            <li class="list-group-item dropdown" id="firstKat">Erster Eintrag</li>
+                                            <li class="list-group-item dropdown" id="secondKat">Zweiter Eintrag</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -64,6 +64,11 @@
                                         <!--Hier wird der Hauptteil der Tabelle generiert und mit Inputfelder bestückt-->
                                         <tbody class="tbody-light" id="tbody_bauch">
                                             <tr>
+                                                <td class="tbody-text"> ISBN: </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="text"  name="ISBN" id="bISBN" placeholder="ISBN ohne Bindestriche eingeben..."></input>
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <td class="tbody-text"> Titel: </td>
                                                 <td class="tbody-felder"> <input class="inputField form-control" type="text" name="Titel" id="bTitel" placeholder="Titel eingeben..."></input> </td>
                                             </tr>
@@ -77,16 +82,11 @@
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Auflage: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" name="Auflage" id="bAuflage" placeholder="Auflage eingeben..."></input></td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="number" name="Auflage" id="bAuflage" placeholder="Auflage eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Jahr: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" type="" name="Jahr" id="bJahr" placeholder="Jahr eingeben..."></input></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="tbody-text"> ISBN: </td>
-                                                <td class="tbody-felder"> <input class="inputField form-control" type="text"  name="ISBN" id="bISBN" placeholder="ISBN ohne Bindestriche eingeben..."></input>
-                                                </td>
+                                                <td class="tbody-felder"> <input class="inputField form-control" type="number" name="Jahr" id="bJahr" placeholder="Jahr eingeben..."></input></td>
                                             </tr>
                                             <tr>
                                                 <td class="tbody-text"> Kategorie: </td>
@@ -141,5 +141,5 @@
 
         </footer>
 
-        <script src="../js/book-add.js" rel="funktionen"></script>
+
     </html>
