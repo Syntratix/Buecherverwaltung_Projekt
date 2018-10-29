@@ -13,6 +13,15 @@ html, body{
     color: white;
 }
 
+.thead{
+    background-color: #FFE842;
+}
+
+#testText{
+    color: #0063AF;
+    font-size: 150%;
+}
+
 .background{
     background-image:  url(../../pix/edeka-logo.png), url(../../pix/edeka-slogan.png), url(../../pix/EDEKA_Hintergrund.jpg);
     background-attachment: fixed;
@@ -33,10 +42,25 @@ html, body{
 .title, h1{
     font-family: Arial Black, sans-serif;
     font-size: 30px;
+    text-decoration: none;
+}
+
+.title, a{
+  color: #0063AF;
+}
+
+.title, a:hover{
+    text-decoration: none;
+    color: #0063AF;
 }
 
 .title{
     margin-top: 10px;
+}
+
+.liste{
+  width:180px;
+  float: left;
 }
 
 .listButton{
@@ -44,28 +68,41 @@ html, body{
     float:left;
 }
 /*Suchbar*/
-.searchbar input {
+
+.searchbarPP{
+  width: 33%;
+  padding-left: 13%;
+  float: left;
+  height: 40px;
+}
+
+.searchbarPP img{
+  width:20px;
+  height:20px;
+  align-content:center;
+  float: right;
+}
+
+.searchbarPP input {
     font-size: 15px;
     border: none;
     padding: 4px;
+    float: left;
 }
-.searchbar button {
+
+.searchbar form{
+  width 100%;
+}
+
+.searchbarPP button {
     background-color: white;
     border: none;
     cursor: pointer;
     font-size: 17px;
     border: none;
-    margin:0;
-    padding: 1.5px 10px 1.5px 10px;
-}
-.searchbar img {
-    height: 20px;
-    alignment: center;
-}
-
-.liste{
-  width:15%;
-  float: left;
+    padding: 5px 10px 5px 10px;
+    margin-left: 2px;
+    height: 100%;
 }
 
 .button{
@@ -135,6 +172,7 @@ ul li ul:hover {
         background-size: 55px 75px, 300px 45px,cover;
         background-position: bottom 10px left 20px, bottom 10px right 20px, center;
     }
+
 
     .title, h1{
         font-size: 40px;
