@@ -30,8 +30,10 @@ function save(){
             verfuegbar: bText
         });
 
-    }
 
+        alert("Buch wurde gespeichert!");
+    }
+    alert("Buch wurde nicht gespeichert, Daten fehlen!");
 }
 
 //let validateInputs = () => {
