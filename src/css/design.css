@@ -7,8 +7,10 @@ html{
     font-family: Segoe, sans-serif;
 }
 
-footer{
-  z-index: 0;
+html, body{
+    height: 100%;
+    width: 100%;
+    color: white;
 }
 
 .thead{
@@ -20,14 +22,6 @@ footer{
     font-size: 150%;
 }
 
-.logoGrenze{
-  position: fixed;
-  bottom: 0;
-  left:0;
-  width:100%;
-  display: block;
-}
-
 .background{
     background-image:  url(../../pix/edeka-logo.png), url(../../pix/edeka-slogan.png), url(../../pix/EDEKA_Hintergrund.jpg);
     background-attachment: fixed;
@@ -37,6 +31,7 @@ footer{
 }
 
 .container{
+    width:100%;
     max-width:100%;
 }
 
@@ -186,11 +181,6 @@ ul li ul:hover {
     .title{
         margin-left: 20px;
     }
-
-    .container{
-      margin-bottom: 90px;
-    }
-
 }
 
 /* Größeneinstellungen für Tabletgröße*/
@@ -206,10 +196,6 @@ ul li ul:hover {
 
     .title{
         margin-left: 30px;
-    }
-
-    .container{
-      margin-bottom: 140px;
     }
 }
 
@@ -227,6 +213,4 @@ ul li ul:hover {
     .title{
         margin-left: 30px;
     }
-
-
  }
