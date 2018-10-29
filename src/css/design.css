@@ -7,6 +7,10 @@ html{
     font-family: Segoe, sans-serif;
 }
 
+footer{
+  z-index: 0;
+}
+
 .thead{
     background-color: #FFE842;
 }
@@ -34,7 +38,6 @@ html{
 
 .container{
     max-width:100%;
-    overflow: initial;
 }
 
 .header{
