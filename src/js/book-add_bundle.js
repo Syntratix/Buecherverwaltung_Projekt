@@ -4,7 +4,7 @@
 //Methode zum speichern des Buches
 
 function save(){
-
+    validateInputs();
     let getAllErrors = document.getElementsByClassName('error');
     if(getAllErrors.length < 1){
 
@@ -20,7 +20,7 @@ function save(){
 
         var firebaseRef = firebase.database().ref('buecher/');
 
-        firebaseRef.child(bISBN).set({
+        let nsave = firebaseRef.child(bISBN).set({
             auflage: bAuflage,
             autor: bAutor,
             isbn: bISBN,
@@ -32,14 +32,27 @@ function save(){
         });
 
 
+
+
+        nsave.then(() => {
+          document.location.href="../index.html";
+        });
         alert("Buch wurde gespeichert!");
+
     }
-    alert("Buch wurde nicht gespeichert, Daten fehlen!");
+    else{
+        alert("Buch wurde nicht gespeichert, Daten fehlen!");
+    }
+
 }
 
-//let validateInputs = () => {
-//    let allInputs = document.querySelectorAll("input");
-//};
+let validateInputs = () => {
+    let allInputs = document.querySelectorAll("input");
+
+    if(allInputs !== ""){
+        allInputs.classList.add("error");
+    }
+};
 
 var isbnIsValid = require('is-isbn');
 
