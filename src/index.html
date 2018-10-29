@@ -14,7 +14,7 @@
             <link href="css/index.css" rel="stylesheet">
         </head>
 
-        <body class="background container">
+        <body class="background container" onload="loadTabel();">
                 <div class="header">
                     <div class="title">
                         <h1> Bücherverwaltung </h1>
@@ -33,8 +33,8 @@
                             </div>
                             <div class"button">
                                 <a href="html/book-add.html"><button class="clickBtn btn" id= "anzeigBtn" type="button"><font color="black">Buch Hinzufügen</font></button></a>
-                                <button class="clickBtn btn" id= "alleAnzeigBtn" onClick="getBooksByTitle('')" type="button"><font color="black">Alle Bücher anzeigen</font></button>
-                                <button class="clickBtn btn" id= "verfuegbarBtn" onClick="getBooksByVerfügbar('')" type="button"><font color="black">Verfügbare Bücher anzeigen</font></button>
+                                <button class="clickBtn btn" id= "alleAnzeigBtn" onClick="reLoadTabel(2)" type="button"><font color="black">Alle Bücher anzeigen</font></button>
+                                <button class="clickBtn btn" id= "verfuegbarBtn" onClick="reLoadTabel(1)" type="button"><font color="black">Verfügbare Bücher anzeigen</font></button>
                              </div>
                         </div>
                         <div class="searchbar">
