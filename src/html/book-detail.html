@@ -43,9 +43,10 @@
                           </div>
                         </div>
 
-                        <div class="searchbar">
-                            <input class="searchbarInput form-control-sm" type="text" placeholder="Buch suchen.."></input>
-                            <button class="searchButton btn" id=suchButton type="button"><img id=lupe src="../../pix/lupe3.png"/></button>
+                        <div class="searchbarPP">
+                                <form action="#" onsubmit="searchBooks()">
+                                    <input type="text" class="form-control-sm searchbar" id="suchBar" placeholder="Buch suchen.."/><button class="searchButton btn" onClick="searchBooks()" type="submit"><img src="../../pix/lupe3.png" alt="Suchen"/></button>
+                                </form>
                         </div>
                     </div>
                 </div>
