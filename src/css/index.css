@@ -1,12 +1,13 @@
-table{
-
-}
-
 td{
   color: black;
 }
 
-thead{
+a{
+  color: #0063AF;
+}
+
+a:hover{
+  text-decoration: underline;
 }
 
 tbody{

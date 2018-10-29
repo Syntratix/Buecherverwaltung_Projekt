@@ -5,7 +5,7 @@ var firebaseRefChild = firebase.database().ref().child("buecher");
 
 function searchBooks() {
     var sucheingabe = document.getElementById('suchBar').value;
-    reLoadTabel(3, sucheingabe);
+    reLoadTabel(2, sucheingabe);
 }
 
 function delTabel(){
@@ -73,7 +73,7 @@ function loadTabel(){
   });
 }
 
-function reLoadTabel(wert, searchbar){
+function reLoadTabel(wert, variable){
 
   firebaseRefChild.on("value", snapshot => {
     delTabel();
@@ -87,6 +87,7 @@ function reLoadTabel(wert, searchbar){
       var autor = data[key].autor;
       var jahr = data[key].jahr;
       var isbn = data[key].isbn;
+      var kategorie = data[key].kategorie;
       var url = 'html/book-detail.html?ISBN='+isbn;
 
       switch(wert){
@@ -95,26 +96,21 @@ function reLoadTabel(wert, searchbar){
           tabel(childKey, titel, autor, jahr, isbn, url);
         }break;
         case 2:
-         $("#tablle_body")
-          tabel(childKey, titel, autor, jahr, isbn, url);
-          break;
-        case 3:
-          if (titel.toLowerCase().includes(searchbar.toLowerCase())) {
-            if(searchbar !== ""){
+          if (titel.toLowerCase().includes(variable.toLowerCase())) {
+            if(variable !== ""){
               tabel(childKey, titel, autor, jahr, isbn, url);
             }else{
               loadTabel();
             }
           }break;
+          case 3:
+          if (kategorie == variable) {
+            tabel(childKey, titel, autor, jahr, isbn, url);
+          }break;
        }
     }
   });
 }
-
-firebaseRefChild.on("child_changed", snapshot => {
-    var tdChanged = document.getElementById(snapshot.key);
-    location.reload(true);
-})
 
 firebaseRefChild.on("child_removed", snapshot => {
   var tdToRemove = document.getElementById(snapshot.key);

@@ -2,7 +2,7 @@
     <html>
         <head>
             <meta charset="utf-8">
-            <title>index</title>
+            <title>Bücherverwaltung</title>
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
@@ -17,7 +17,7 @@
         <body class="background container" onload="loadTabel();">
                 <div class="header">
                     <div class="title">
-                        <h1> Bücherverwaltung </h1>
+                        <h1>Bücherverwaltung</h1>
                     </div>
                     <div class="actionbar">
                         <div class="listButton">
@@ -33,13 +33,13 @@
                             </div>
                             <div class"button">
                                 <a href="html/book-add.html"><button class="clickBtn btn" id= "anzeigBtn" type="button"><font color="black">Buch Hinzufügen</font></button></a>
-                                <button class="clickBtn btn" id= "alleAnzeigBtn" onClick="reLoadTabel(2)" type="button"><font color="black">Alle Bücher anzeigen</font></button>
+                                <button class="clickBtn btn" id= "alleAnzeigBtn" onClick="loadTabel()" type="button"><font color="black">Alle Bücher anzeigen</font></button>
                                 <button class="clickBtn btn" id= "verfuegbarBtn" onClick="reLoadTabel(1)" type="button"><font color="black">Verfügbare Bücher anzeigen</font></button>
                              </div>
                         </div>
-                        <div class="searchbar">
+                        <div class="searchbarPP">
                                 <form action="#" onsubmit="searchBooks()">
-                                    <input type="text" class="searchbarInput form-control-sm" id="suchBar" placeholder="Buch suchen.."/><button class="searchButton btn" onClick="searchBooks()" type="submit"><img id=lupe src="../pix/lupe3.png" alt="Suchen"/></button>
+                                    <input type="text" class="form-control-sm searchbar" id="suchBar" placeholder="Buch suchen.."/><button class="searchButton btn" onClick="searchBooks()" type="submit"><img src="../pix/lupe3.png" alt="Suchen"/></button>
                                 </form>
                         </div>
                     </div>
@@ -47,19 +47,18 @@
 
                 <div class="books">
                   <table class="table-books table table-bordered">
-                      <thead class="thead-dark">
+                      <thead class="thead">
                         <tr>
-                          <th scope='col'>Titel</th>
-                          <th scope='col'>Autor</th>
-                          <th scope='col'>Jahr</th>
-                          <th scope='col'>ISBN</th>
+                          <th id="testText" scope='col'>Titel</th>
+                          <th id="testText" scope='col'>Autor</th>
+                          <th id="testText" scope='col'>Jahr</th>
+                          <th id="testText" scope='col'>ISBN</th>
                         </tr>
                     </thead>
                     <tbody id="tablle_body" class="tbody-light">
 
                     </tbody>
                   </table>
-
                 </div>
         </body>
 
