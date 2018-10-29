@@ -29,23 +29,9 @@ function loeschen(){
     }
 }
 function speichern(){
-    var bISBN = document.getElementById('bISBN').value;
-    var bTitel = document.getElementById("bTitel").value;
-    var bAutor = document.getElementById("bAutor").value;
-    var bJahr = document.getElementById("bJahr").value;
-    var bAuflage = document.getElementById("bAuflage").value;
-    var bVerlag = document.getElementById("bVerlag").value;
-    var bKat = document.getElementById("katWahl").value;
     var bText = document.getElementById("verfuegbarField").value;
 
-    firebaseRef.child(search).set({
-        auflage: bAuflage,
-        autor: bAutor,
-        isbn: bISBN,
-        jahr: bJahr,
-        kategorie: bKat,
-        titel: bTitel,
-        verlag: bVerlag,
+    firebaseRef.child(search).update({
         verfuegbar: bText
     });
 }
