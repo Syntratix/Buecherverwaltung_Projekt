@@ -49,8 +49,20 @@ function save(){
     let allInputs = document.querySelectorAll("input");
         for(let i = 0; i < allInputs.length; i++){
             if(allInputs[i].value == ""){
-                let item = allInputs[i];
-                item.classList.add("error");
+                allInputs[i].classList.add("error");
+            }
+            else{
+                if(allInputs[i].id === "bISBN"){
+                    if(isbnIsValid.validate(allInputs[i].value)){
+                        allInputs[i].classList.remove("error");
+                    }
+                    else{
+                        allInputs[i].classList.add("error");
+                    }
+                }
+                else{
+                    allInputs[i].classList.remove("error");
+                }
             }
         }
 };
@@ -79,6 +91,11 @@ let onIsbnInput =(event)=>{
     else{
         event.srcElement.classList.add("error");
         readOnlyInput(false);
+        let allInputs = document.querySelectorAll("input");
+            for(let i = 1; i < allInputs.length; i++){
+                allInputs[i].value = "";
+                allInputs[i].classList.remove("error");
+        }
     }
 }
 
@@ -93,6 +110,7 @@ let checkEdition = ()=>{
         iAuflage.classList.add("error");
     }
 }
+//Funktion die automatisch ausgefüllten Felder für den User sperrt
 
 let readOnlyInput = (bDisable)=>{
 
