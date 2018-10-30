@@ -4,7 +4,7 @@
 //Methode zum speichern des Buches
 
 function save(){
-    validateInputs();
+
     let getAllErrors = document.getElementsByClassName('error');
     if(getAllErrors.length < 1){
 
@@ -31,9 +31,6 @@ function save(){
             verfuegbar: bText
         });
 
-
-
-
         nsave.then(() => {
           document.location.href="../index.html";
         });
@@ -46,19 +43,19 @@ function save(){
 
 }
 
-let validateInputs = () => {
-    let allInputs = document.querySelectorAll("input");
-
-    if(allInputs !== ""){
-        allInputs.classList.add("error");
-    }
-};
+// let validateInputs = () => {
+//     let allInputs = document.querySelectorAll("input");
+//
+//     if(allInputs !== ""){
+//         allInputs.classList.add("error");
+//     }
+// };
 
 var isbnIsValid = require('is-isbn');
 
 window.addEventListener("load",()=>{
     var bISBN = document.getElementById('bISBN');
-    bISBN.addEventListener("input",onIsbnInput);
+    bISBN.addEventListener("input", onIsbnInput);
     let saveBtn = document.getElementById('saveBtn');
     saveBtn.addEventListener("click", save);
     let cAuflage = document.getElementById('bAuflage');
@@ -73,9 +70,11 @@ let onIsbnInput =(event)=>{
     if(isbnIsValid.validate(value)){
         event.srcElement.classList.remove("error");
         getBookDetails(value);
+        readOnlyInput(true);
     }
     else{
         event.srcElement.classList.add("error");
+        readOnlyInput(false);
     }
 }
 
@@ -89,6 +88,20 @@ let checkEdition = ()=>{
     else{
         iAuflage.classList.add("error");
     }
+}
+
+let readOnlyInput = (bDisable)=>{
+
+    let aAutor = document.getElementById("bAutor");
+    let aTitel = document.getElementById("bTitel");
+    let aVerlag = document.getElementById("bVerlag");
+    let aJahr = document.getElementById("bJahr");
+
+        aAutor.disabled = bDisable;
+        aTitel.disabled = bDisable;
+        aVerlag.disabled = bDisable;
+        aJahr.disabled = bDisable;
+
 }
 
 //Funktion um die alle Felder nach Eingabe einer gütligen ISBN befüllt
@@ -112,6 +125,7 @@ let getBookDetails = (isbn) => {
           }
           document.getElementById('bAutor').value = autor;
 
+
           let year = data["items"][0].volumeInfo.publishedDate;
           year = year.slice(0,4);
           document.getElementById('bJahr').value = year;
@@ -121,6 +135,29 @@ let getBookDetails = (isbn) => {
       }
   });
 }
+
+// function delKatGen(){
+//     document.getElementById('mainKat').innerHTML = "";
+// }
+//
+// function katGen(childKey, url, kategorie){
+//   $("#mainKat").append(
+//     "<ul id='"+ childKey +"'><li><a href= "+url+">" + kategorie +
+//     "</a></li></ul>"
+//   );
+// }
+//
+// function loadKatGen(){
+//     delKatGen();
+//     firebaseRefChild.on("child_added", snapshot => {
+//
+//       var childKey = snapshot.key;
+//       var kategorie = snapshot.child("kategorie").val();
+//       var url = 'html/book-detail.html?ISBN='+isbn;
+//
+//       tabel(childKey, url, kategorie);
+//   });
+// }
 
 },{"is-isbn":2}],2:[function(require,module,exports){
 function isIsbn(){}
