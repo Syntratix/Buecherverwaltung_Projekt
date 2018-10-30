@@ -134,26 +134,3 @@ let getBookDetails = (isbn) => {
       }
   });
 }
-
-function delKatGen(){
-    document.getElementById('mainKat').innerHTML = "";
-}
-
-function katGen(childKey, url, kategorie){
-  $("#mainKat").append(
-    "<ul id='"+ childKey +"'><li><a href= "+url+">" + kategorie +
-    "</a></li></ul>"
-  );
-}
-
-function loadKatGen(){
-    delKatGen();
-    firebaseRefChild.on("child_added", snapshot => {
-
-      var childKey = snapshot.key;
-      var kategorie = snapshot.child("kategorie").val();
-      var url = 'html/book-detail.html?ISBN='+isbn;
-
-      tabel(childKey, url, kategorie);
-  });
-}
