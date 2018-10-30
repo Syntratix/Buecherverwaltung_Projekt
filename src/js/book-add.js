@@ -42,11 +42,11 @@ function save(){
 
 }
 
-// let validateInputs = () => {
-//     let allInputs = document.querySelectorAll("input");
+//  let validateInputs = () => {
+//      let allInputs = document.querySelectorAll("input");
 //
 //     if(allInputs !== ""){
-//         allInputs.classList.add("error");
+//          allInputs.classList.add("error");
 //     }
 // };
 
@@ -54,7 +54,7 @@ var isbnIsValid = require('is-isbn');
 
 window.addEventListener("load",()=>{
     var bISBN = document.getElementById('bISBN');
-    bISBN.addEventListener("input",onIsbnInput);
+    bISBN.addEventListener("input", onIsbnInput);
     let saveBtn = document.getElementById('saveBtn');
     saveBtn.addEventListener("click", save);
     let cAuflage = document.getElementById('bAuflage');
@@ -69,9 +69,11 @@ let onIsbnInput =(event)=>{
     if(isbnIsValid.validate(value)){
         event.srcElement.classList.remove("error");
         getBookDetails(value);
+        readOnlyInput(true);
     }
     else{
         event.srcElement.classList.add("error");
+        readOnlyInput(false);
     }
 }
 
@@ -85,6 +87,20 @@ let checkEdition = ()=>{
     else{
         iAuflage.classList.add("error");
     }
+}
+
+let readOnlyInput = (bDisable)=>{
+
+    let aAutor = document.getElementById("bAutor");
+    let aTitel = document.getElementById("bTitel");
+    let aVerlag = document.getElementById("bVerlag");
+    let aJahr = document.getElementById("bJahr");
+
+        aAutor.disabled = bDisable;
+        aTitel.disabled = bDisable;
+        aVerlag.disabled = bDisable;
+        aJahr.disabled = bDisable;
+
 }
 
 //Funktion um die alle Felder nach Eingabe einer gütligen ISBN befüllt
@@ -107,6 +123,7 @@ let getBookDetails = (isbn) => {
               autor += autors[i] + ", ";
           }
           document.getElementById('bAutor').value = autor;
+
 
           let year = data["items"][0].volumeInfo.publishedDate;
           year = year.slice(0,4);
