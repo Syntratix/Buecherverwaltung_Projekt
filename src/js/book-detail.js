@@ -10,7 +10,7 @@ function detailBuch() {
              document.getElementById('bTitel').value = book.val().titel;
              document.getElementById('bAutor').value = book.val().autor;
              document.getElementById('bVerlag').value = book.val().verlag;
-             document.getElementById('bAuflage').value = book.val().isbn;
+             document.getElementById('bAuflage').value = book.val().auflage;
              document.getElementById('bJahr').value = book.val().jahr;
              document.getElementById('bISBN').value = book.val().isbn;
              document.getElementById('bKategorie').value = book.val().kategorie;
@@ -34,4 +34,9 @@ function speichern(){
     firebaseRef.child(search).update({
         verfuegbar: bText
     });
+}
+
+function searchBooks() {
+    var sucheingabe = document.getElementById('suchBar').value;
+    document.location.href="../index.html";
 }
