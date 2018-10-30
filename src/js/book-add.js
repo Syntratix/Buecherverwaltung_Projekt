@@ -3,6 +3,7 @@
 //Methode zum speichern des Buches
 
 function save(){
+    validateInputs();
 
     let getAllErrors = document.getElementsByClassName('error');
     if(getAllErrors.length < 1){
@@ -42,13 +43,17 @@ function save(){
 
 }
 
-//  let validateInputs = () => {
-//      let allInputs = document.querySelectorAll("input");
-//
-//     if(allInputs !== ""){
-//          allInputs.classList.add("error");
-//     }
-// };
+//Funktion die alle Input Felder die nicht ausgefüllt sind rot markiert
+
+ let validateInputs = () => {
+    let allInputs = document.querySelectorAll("input");
+        for(let i = 0; i < allInputs.length; i++){
+            if(allInputs[i].value == ""){
+                let item = allInputs[i];
+                item.classList.add("error");
+            }
+        }
+};
 
 var isbnIsValid = require('is-isbn');
 
