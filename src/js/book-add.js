@@ -42,11 +42,11 @@ function save(){
 
 }
 
-// let validateInputs = () => {
-//     let allInputs = document.querySelectorAll("input");
+//  let validateInputs = () => {
+//      let allInputs = document.querySelectorAll("input");
 //
 //     if(allInputs !== ""){
-//         allInputs.classList.add("error");
+//          allInputs.classList.add("error");
 //     }
 // };
 
