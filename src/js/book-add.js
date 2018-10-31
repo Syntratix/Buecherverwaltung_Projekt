@@ -95,6 +95,7 @@ let onIsbnInput =(event)=>{
             for(let i = 1; i < allInputs.length; i++){
                 allInputs[i].value = "";
                 allInputs[i].classList.remove("error");
+
         }
     }
 }
