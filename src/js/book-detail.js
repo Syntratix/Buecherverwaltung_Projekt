@@ -42,6 +42,7 @@ function speichern(){
     firebaseRef.child(search).update({
         verfuegbar: bText
     });
+    alert("Verfügbar bei wurde gespeichert!");
 }
 
 function searchBooks(){
