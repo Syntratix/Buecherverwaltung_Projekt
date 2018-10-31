@@ -3,6 +3,14 @@
 var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 6));
 var firebaseRef = firebase.database().ref("buecher/");
 
+document.getElementById("suchBar").addEventListener("keyup",function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("submitButton").click();
+    }
+});
+
+
 function detailBuch() {
     firebase.database().ref("buecher/").once('value', function(snapshot){
         snapshot.forEach(function(book){
@@ -36,7 +44,8 @@ function speichern(){
     });
 }
 
-function searchBooks() {
+function searchBooks(){
     var sucheingabe = document.getElementById('suchBar').value;
-    document.location.href="../index.html";
+    var newURL = "../index.html?search="+ sucheingabe;
+    document.location.href= newURL;
 }

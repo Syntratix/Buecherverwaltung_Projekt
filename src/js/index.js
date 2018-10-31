@@ -3,6 +3,13 @@
 
 var firebaseRefChild = firebase.database().ref().child("buecher");
 
+document.getElementById("suchBar").addEventListener("keyup",function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("submitButton").click();
+    }
+});
+
 function searchBooks() {
     var sucheingabe = document.getElementById('suchBar').value;
     reLoadTabel(2, sucheingabe);
@@ -59,7 +66,18 @@ function tabel(childKey, titel, autor, jahr, isbn, url){
   );
 }
 
+function urlLeeren () {
+    history.pushState("", document.title, window.location.pathname);
+}
+
 function loadTabel(){
+    var urlParameter = window.location.search;
+    if (urlParameter !== ""){
+        var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));
+        urlLeeren()
+        reLoadTabel(2, search);
+    }
+    else{
     delTabel();
     firebaseRefChild.on("child_added", snapshot => {
 
@@ -72,6 +90,7 @@ function loadTabel(){
 
       tabel(childKey, titel, autor, jahr, isbn, url);
   });
+}
 }
 
 function reLoadTabel(wert, variable){
@@ -105,7 +124,7 @@ function reLoadTabel(wert, variable){
             }
           }break;
           case 3:
-          if (kategorie == variable) {
+          if (kategorie == "BWL") {
             tabel(childKey, titel, autor, jahr, isbn, url);
           }break;
        }
