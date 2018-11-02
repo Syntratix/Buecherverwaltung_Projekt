@@ -77,8 +77,8 @@ window.addEventListener("load",()=>{
     saveBtn.addEventListener("click", save);
     let cAuflage = document.getElementById('bAuflage');
     cAuflage.addEventListener("input", checkEdition);
-    // let suchBar = document.getElementById('suchBar');
-    // suchBar.addEventListener("keyup", searchBooks);
+    let suchBar = document.getElementById('suchBar');
+    suchBar.addEventListener("keyup", searchBooks);
     let suchKnopf = document.getElementById('submitButton');
     suchKnopf.addEventListener("click", searchBooks);
 });
@@ -164,17 +164,14 @@ let getBookDetails = (isbn) => {
   });
 }
 
-document.getElementById("suchBar").addEventListener("keyup",function (event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("submitButton").click();
+function searchBooks(event){
+        var sucheingabe = document.getElementById('suchBar').value;
+    ///wenn klick oder wenn event.keyKEy ===13
+    if(event.type==="click" || event.keyCode===13){
+        var newURL = "../index.html?search="+ sucheingabe;
+        document.location.href= newURL;
     }
-});
 
-function searchBooks(){
-    var sucheingabe = document.getElementById('suchBar').value;
-    var newURL = "../index.html?search="+ sucheingabe;
-    document.location.href= newURL;
 }
 
 },{"is-isbn":2}],2:[function(require,module,exports){
