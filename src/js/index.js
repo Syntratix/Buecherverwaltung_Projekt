@@ -70,14 +70,19 @@ function urlLeeren () {
     history.pushState("", document.title, window.location.pathname);
 }
 
-function loadTabel(){
+function pruefer(){
     var urlParameter = window.location.search;
     if (urlParameter !== ""){
         var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));
-        urlLeeren()
+        urlLeeren();
         reLoadTabel(2, search);
     }
-    else{
+    else {
+        loadTabel();
+    }
+}
+
+function loadTabel(){
     delTabel();
     firebaseRefChild.on("child_added", snapshot => {
 
@@ -90,7 +95,6 @@ function loadTabel(){
 
       tabel(childKey, titel, autor, jahr, isbn, url);
   });
-}
 }
 
 function reLoadTabel(wert, variable){

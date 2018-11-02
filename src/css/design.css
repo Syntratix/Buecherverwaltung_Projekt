@@ -13,6 +13,17 @@ html, body{
     color: white;
 }
 
+footer{
+  bottom: 0;
+  position: fixed;
+  height: 20%;
+  width: 100%;
+  background-image: url(../../pix/edeka-logo.png), url(../../pix/edeka-slogan.png),url(../../pix/EDEKA_Hintergrund_footer.png);
+  background-size: 5% 75%, 26% 40% ,cover;
+  background-position: bottom 1% left 2%, bottom 1% right 2%, center;
+  background-repeat: no-repeat;
+}
+
 .thead{
     background-color: #FFE842;
 }
@@ -23,16 +34,18 @@ html, body{
 }
 
 .background{
-    background-image:  url(../../pix/edeka-logo.png), url(../../pix/edeka-slogan.png), url(../../pix/EDEKA_Hintergrund.jpg);
+    background-image:url(../../pix/EDEKA_Hintergrund.jpg);
     background-attachment: fixed;
-    background-size: 45px 65px, 190px 35px,cover;
-    background-position: bottom 10px left 20px, bottom 10px right 10px, center;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
 .container{
     width:100%;
     max-width:100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .header{
@@ -165,11 +178,6 @@ ul li ul:hover {
 
 /*Größeneinstellungen für Smartphones*/
 @media (min-width: 576px){
-    .background{
-        background-size: 55px 75px, 300px 45px,cover;
-        background-position: bottom 10px left 20px, bottom 10px right 20px, center;
-    }
-
 
     .title, h1{
         font-size: 40px;
@@ -182,10 +190,6 @@ ul li ul:hover {
 
 /* Größeneinstellungen für Tabletgröße*/
 @media (min-width: 768px) {
-    .background{
-        background-size: 75px 100px, 350px 50px,cover;
-        background-position: bottom 10px left 30px, bottom 10px right 30px, center;
-    }
 
     .title, h1{
         font-size: 50px;
@@ -198,10 +202,6 @@ ul li ul:hover {
 
 /* Größeneinstellungen für Desktops*/
 @media (min-width: 1200px) {
-    .background{
-        background-size: 100px 150px, 500px 75px,cover;
-        background-position: bottom 10px left 30px, bottom 10px right 30px, center;
-    }
 
     .title, h1{
         font-size: 70px;
