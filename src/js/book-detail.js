@@ -10,6 +10,9 @@ document.getElementById("suchBar").addEventListener("keyup",function (event) {
     }
 });
 
+function start(){
+  detailBuch();
+}
 
 function detailBuch() {
     firebase.database().ref("buecher/").once('value', function(snapshot){

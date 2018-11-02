@@ -1,7 +1,12 @@
 "use strict"
 
-//Methode zum speichern des Buches
+import { saveVar } from 'content';
 
+function start(){
+    saveVar();
+}
+
+//Methode zum speichern des Buches
 function save(){
     validateInputs();
 
@@ -164,7 +169,7 @@ let getBookDetails = (isbn) => {
 }
 
 function searchBooks(event){
-        var sucheingabe = document.getElementById('suchBar').value;
+    var sucheingabe = document.getElementById('suchBar').value;
     ///wenn klick oder wenn event.keyKEy ===13
     if(event.type==="click" || event.keyCode===13){
         var newURL = "../index.html?search="+ sucheingabe;

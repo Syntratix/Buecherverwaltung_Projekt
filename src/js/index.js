@@ -1,6 +1,8 @@
 
 "use strict"
 
+//import { saveVar } from './content.js';
+
 var firebaseRefChild = firebase.database().ref().child("buecher");
 
 document.getElementById("suchBar").addEventListener("keyup",function (event) {
@@ -70,7 +72,10 @@ function urlLeeren () {
     history.pushState("", document.title, window.location.pathname);
 }
 
-function pruefer(){
+
+
+function start(){
+
     var urlParameter = window.location.search;
     if (urlParameter !== ""){
         var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));

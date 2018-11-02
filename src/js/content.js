@@ -1,5 +1,6 @@
 "use strict"
 
+
 var firebaseRefChild = firebase.database().ref().child("buecher");
 
 function li(cat){
@@ -12,7 +13,8 @@ function li(cat){
     }
 }
 
-let saveVar = () =>{
+
+  function saveVar(){
 
     var value = new Array();
     let pet = new Set();
@@ -56,3 +58,5 @@ let saveVar = () =>{
         li(pet);
     })
 }
+
+//module.export = { saveVar };
