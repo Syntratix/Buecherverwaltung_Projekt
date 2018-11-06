@@ -8,9 +8,14 @@ function li(cat){
     let categorie = Array.from(cat);
     for(let u = 0; u < categorie.length; u++){
         $("#secCat").append(
-            "<li class='"+liPara+"'>"+ categorie[u] +"</li>"
+            "<li class='"+liPara+"' onclick='clickOnLi(event)'>" + categorie[u] +"</li>"
         );
     }
+}
+
+function clickOnLi(event){
+  let cat = event.srcElement.innerHTML;
+  reLoadTabel(3,cat);
 }
 
 
