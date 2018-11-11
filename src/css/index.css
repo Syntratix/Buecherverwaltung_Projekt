@@ -38,7 +38,7 @@ tbody{
 @media screen and (min-width: 992px) {
     #wechselButton{
         margin-top: 0;
-        
+
     }
 
 }
@@ -52,5 +52,11 @@ tbody{
     .table-books{
       width:96.5%;
       margin-left: 40px;
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    .books{
+        padding-right:0;
     }
  }

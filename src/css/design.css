@@ -79,15 +79,33 @@ footer{
 }
 
 .listButton{
-    width: 67%;
     float:left;
 }
-/*Suchbar*/
 
+.searchbarPP input {
+    border: none;
+    float: left;
+}
 
+.searchbarPP img{
+    align-content:center;
+    float: right;
+}
+
+.searchbarPP button{
+    height: 100%;
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.searchbarPP{
+    padding-left: 0;
+    float: right;
+}
 
 .button{
-  width:70%;
   float: right;
 }
 
@@ -176,9 +194,7 @@ ul li ul:hover {
 
     .searchbarPP input {
         font-size: 25px;
-        border: none;
         padding: 4px;
-        float: left;
     }
 
     .searchbarPP img{
@@ -187,15 +203,10 @@ ul li ul:hover {
     }
 
     .searchbarPP button{
-        background-color: white;
         font-size: 25px;
-        height: 100%;
-        padding: 0px 10px 5px 10px;
     }
 
     .searchbarPP{
-        padding-left: 0;
-        float: right;
         width: 36.5%;
         height: 45px;
         margin-right: 15px;
@@ -203,15 +214,11 @@ ul li ul:hover {
 
     .button{
         width: 10%;
-
     }
 
     .listButton{
         width: 0px;
     }
-
-
-
 }
 
 @media screen and (min-width: 992px) {
@@ -251,29 +258,20 @@ ul li ul:hover {
 
     .searchbarPP input {
         font-size: 17px;
-        border: none;
         padding: 5px;
-        float: left;
     }
 
     .searchbarPP img{
         width:25px;
         height:25px;
-        align-content:center;
-        float: right;
     }
 
     .searchbarPP button{
-        background-color: white;
         font-size: 25px;
-        height: 100%;
-        padding: 5px 10px 5px 10px;
         margin-left: 2px;
     }
 
     .searchbarPP{
-        padding-left: 0;
-        float: right;
         width: 25%;
         height: 35px;
         margin-right: 15px;
@@ -309,33 +307,20 @@ ul li ul:hover {
 
     .searchbarPP input {
         font-size: 15px;
-        border: none;
         padding: 4px;
-        float: left;
     }
 
     .searchbarPP img{
       width:20px;
       height:20px;
-      align-content:center;
-      float: right;
     }
 
     .searchbarPP button {
-        background-color: white;
-        border: none;
-        cursor: pointer;
         font-size: 17px;
-        border: none;
-        padding: 5px 10px 5px 10px;
         margin-left: 2px;
-        height: 100%;
     }
 
-
     .searchbarPP{
-        padding-left: 0;
-        float: right;
         width: 230px;
         height: 30px;
         margin-right: 15px;
