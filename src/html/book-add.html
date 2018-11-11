@@ -38,7 +38,7 @@
                                 </ul>
                             </div>
 
-                            <div class"button">
+                            <div class="button">
                               <button class="clickBtn btn" id= "saveBtn" type="button"><font color="black">Speichern</font></button>
                           </div>
                         </div>
@@ -51,10 +51,10 @@
 
                 <!--Hier Hauptteil der Seite, die Bootstrap Tabelle wird erstellt-->
                 <div class="books container-fluid">
-                    <div class="row">
-                        <div class="col-md-6">
+                    <div class="row" id="gesTable">
+
                             <!--Als Erstes der Kopf der Tabelle mit "thead"-->
-                                    <table class="table-hinzu table table-bordered">
+                                    <table class="table-hinzu table table-bordered " id="leftTable">
                                         <thead class="thead">
                                           <tr>
                                             <th id="testText" colspan="2"> Buch: </th>
@@ -88,6 +88,7 @@
                                                 <td class="tbody-felder"> <input class="inputField form-control" type="text" name="Jahr" id="bJahr" placeholder="Jahr eingeben..."></input></td>
                                             </tr>
                                             <tr>
+                                                <!--Aus Zeitgründen hier statisch-->
                                                 <td class="tbody-text"> Kategorie: </td>
                                                 <td class="tbody-felder">
                                                     <select class="custom-select" id="katWahl">
@@ -99,11 +100,11 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                        </div>
+
 
                         <!--Hier wird die rechte Tabelle generiert die für die Kategorie "Verfübar bei" zuständig ist-->
-                        <div class="col-md-6">
-                            <table class="table-hinzu table table-bordered">
+
+                            <table class="table-hinzu table table-bordered" id="rightTable">
                                 <thead class="thead">
                                   <tr>
                                     <th id="testText"> Verfügbar bei: </th>
@@ -120,7 +121,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
+
                     </div>
                 </div>
                 <footer> </footer>

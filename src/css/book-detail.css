@@ -1,24 +1,14 @@
 .row{
     margin-top: 20px;
     margin-left: 25px;
+    margin-right: 25px;
 }
 tbody{
     background-color: white;
-
 }
 
 .tbody-text{
     color: black;
-}
-
-.thead{
-    background-color: rgb(242, 242, 60);
-
-}
-
-#testText{
-    color: rgb(0,99,175);
-    font-size: 150%;
 }
 
 .tbody-text{
@@ -62,4 +52,106 @@ tbody{
 }
 #deleteBtn{
     margin-left: 6px;
+}
+
+/*Größeneinstellungen für Smartphones*/
+@media screen and (min-width: 768px){
+    .row{
+        height: 1500px;
+    }
+
+    #gesTable{
+        display: grid;
+        grid-template-rows: 40% 1% 60%;
+        grid-template-columns: 100%;
+    }
+
+    #leftTable{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:1;
+        grid-row-end:2;
+    }
+
+    #rightTable{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:3;
+        grid-row-end:4;
+    }
+
+    #deleteBtn{
+        margin-left: 40px;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #deleteBtn{
+        margin-left: 8px;
+        margin-top: 0;
+    }
+
+    .row{
+        height: 1500px;
+    }
+
+    .header{
+        height: 150px;
+    }
+
+    #gesTable{
+        display: grid;
+        grid-template-rows: 40% 1% 60%;
+        grid-template-columns: 100%;
+    }
+
+    #leftTable{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:1;
+        grid-row-end:2;
+    }
+
+    #rightTable{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:3;
+        grid-row-end:4;
+    }
+}
+
+/* Größeneinstellungen für Desktops*/
+@media screen and (min-width: 1200px){
+
+    #deleteBtn{
+        margin-left: 14px;
+        margin-top: 0;
+    }
+
+    .row{
+        height: 50%;
+    }
+
+    #gesTable{
+        display: grid;
+        grid-template-rows: 100%;
+        grid-template-columns: 50% 1% 50%;
+    }
+
+
+    #leftTable{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:1;
+        grid-row-end:2;
+    }
+
+    #rightTable{
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end:2;
+    }
+
 }

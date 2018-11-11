@@ -19,7 +19,6 @@ footer{
   height: 20%;
   width: 100%;
   background-image: url(../../pix/edeka-logo.png), url(../../pix/edeka-slogan.png),url(../../pix/EDEKA_Hintergrund_footer.png);
-  background-size: 5% 75%, 26% 40% ,cover;
   background-position: bottom 1% left 2%, bottom 1% right 2%, center;
   background-repeat: no-repeat;
 }
@@ -46,6 +45,9 @@ footer{
     max-width:100%;
     padding-left: 0;
     padding-right: 0;
+    height: 550px;
+    max-height: 550px;
+
 }
 
 .header{
@@ -54,7 +56,7 @@ footer{
 
 .title, h1{
     font-family: Arial Black, sans-serif;
-    font-size: 30px;
+    font-size: 60px;
     text-decoration: none;
 }
 
@@ -82,38 +84,7 @@ footer{
 }
 /*Suchbar*/
 
-.searchbarPP{
-  width: 33%;
-  padding-left: 13%;
-  float: left;
-  height: 30px;
-}
 
-.searchbarPP img{
-  width:20px;
-  height:20px;
-  align-content:center;
-  float: right;
-}
-
-.searchbarPP input {
-    font-size: 15px;
-    border: none;
-    padding: 4px;
-    float: left;
-}
-
-
-.searchbarPP button {
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 17px;
-    border: none;
-    padding: 5px 10px 5px 10px;
-    margin-left: 2px;
-    height: 100%;
-}
 
 .button{
   width:70%;
@@ -122,9 +93,8 @@ footer{
 
 .clickBtn{
     background-color: white;
-    font-size: 15px;
+    font-size: 25px;
     border: none;
-    margin-left: 10px;
     padding: 4px;
 }
 
@@ -176,38 +146,206 @@ ul li ul:hover {
   display: block;
 }
 
-/*Größeneinstellungen für Smartphones*/
-@media (min-width: 576px){
+/*Verschiedene Größeneinstellungen*/
+@media screen and (min-width: 768px){
 
     .title, h1{
-        font-size: 40px;
+        font-size: 70px;
+        margin-left: 20px;
     }
 
     .title{
         margin-left: 20px;
     }
+
+    .liste{
+        font-size: 25px;
+    }
+
+    .header{
+        height: 350px;
+    }
+
+    footer{
+        background-size: 15% 55%, 40% 20% ,cover;
+    }
+
+    .clickBtn{
+        margin-left: 40px;
+    }
+
+    .searchbarPP input {
+        font-size: 25px;
+        border: none;
+        padding: 4px;
+        float: left;
+    }
+
+    .searchbarPP img{
+        width:35px;
+        height:35px;
+    }
+
+    .searchbarPP button{
+        background-color: white;
+        font-size: 25px;
+        height: 100%;
+        padding: 0px 10px 5px 10px;
+    }
+
+    .searchbarPP{
+        padding-left: 0;
+        float: right;
+        width: 36.5%;
+        height: 45px;
+        margin-right: 15px;
+    }
+
+    .button{
+        width: 10%;
+
+    }
+
+    .listButton{
+        width: 0px;
+    }
+
+
+
 }
 
-/* Größeneinstellungen für Tabletgröße*/
-@media (min-width: 768px) {
+@media screen and (min-width: 992px) {
+
+    .header{
+        height: 150px;
+    }
 
     .title, h1{
-        font-size: 50px;
+        font-size: 60px;
     }
 
     .title{
         margin-left: 30px;
     }
+
+    .liste{
+        font-size: 18px;
+    }
+
+    .listButton{
+        width: 600px;
+    }
+
+    .clickBtn{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .button{
+        width: 400px;
+    }
+
+    footer{
+        background-size: 10% 75%, 26% 40% ,cover;
+    }
+
+    .searchbarPP input {
+        font-size: 17px;
+        border: none;
+        padding: 5px;
+        float: left;
+    }
+
+    .searchbarPP img{
+        width:25px;
+        height:25px;
+        align-content:center;
+        float: right;
+    }
+
+    .searchbarPP button{
+        background-color: white;
+        font-size: 25px;
+        height: 100%;
+        padding: 5px 10px 5px 10px;
+        margin-left: 2px;
+    }
+
+    .searchbarPP{
+        padding-left: 0;
+        float: right;
+        width: 25%;
+        height: 35px;
+        margin-right: 15px;
+    }
 }
 
-/* Größeneinstellungen für Desktops*/
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px){
+
+    .header{
+        height: 200px;
+    }
 
     .title, h1{
         font-size: 70px;
     }
 
     .title{
-        margin-left: 30px;
+        margin-left: 15px;
+    }
+
+    .liste{
+        font-size: 15px;
+    }
+
+    .clickBtn{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    footer{
+        background-size: 5% 65%, 26% 35% ,cover;
+    }
+
+    .searchbarPP input {
+        font-size: 15px;
+        border: none;
+        padding: 4px;
+        float: left;
+    }
+
+    .searchbarPP img{
+      width:20px;
+      height:20px;
+      align-content:center;
+      float: right;
+    }
+
+    .searchbarPP button {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 17px;
+        border: none;
+        padding: 5px 10px 5px 10px;
+        margin-left: 2px;
+        height: 100%;
+    }
+
+
+    .searchbarPP{
+        padding-left: 0;
+        float: right;
+        width: 230px;
+        height: 30px;
+        margin-right: 15px;
+    }
+
+    .button{
+        width: 350px;
+    }
+
+    .listButton{
+        width: 550px;
     }
  }

@@ -15,7 +15,42 @@ tbody{
 
 }
 
-.table-books{
-  width:75%;
-  margin-left: 40px;
+#wechselButton{
+    margin-top: 0;
 }
+
+/*Verschiedene Größeneinstellungen*/
+@media screen and (min-width: 768px){
+
+
+    .table-books{
+      width:92.5%;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+
+    #wechselButton{
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    #wechselButton{
+        margin-top: 0;
+        
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+
+    #wechselButton{
+        margin-top: 0;
+    }
+
+    .table-books{
+      width:96.5%;
+      margin-left: 40px;
+    }
+ }
