@@ -45,13 +45,18 @@ footer{
     max-width:100%;
     padding-left: 0;
     padding-right: 0;
-    height: 550px;
-    max-height: 550px;
+    height: 100%;
+    max-height: 100%;
 
 }
 
 .header{
     height: 20%;
+}
+
+.books{
+    height: 60%;
+    max-height: 80%;
 }
 
 .title, h1{
@@ -162,6 +167,13 @@ ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
+}
+
+.table-books{
+    display: inline-block;
+    overflow-y: scroll;
+    max-height: 100%;
+    margin-bottom: 32px;
 }
 
 /*Verschiedene Größeneinstellungen*/
@@ -333,4 +345,7 @@ ul li ul:hover {
     .listButton{
         width: 550px;
     }
+
+
+
  }
