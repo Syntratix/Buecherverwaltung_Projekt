@@ -152,7 +152,13 @@ let getBookDetails = (isbn) => {
           let autor = "";
           let autors = data["items"][0].volumeInfo.authors;
           for(let i = 0; i < autors.length; i++){
-              autor += autors[i] + ", ";
+              if(i == autors.length-1){
+                  autor += autors[i];
+              }
+              else{
+                  autor += autors[i] + ", ";
+              }
+
           }
           document.getElementById('bAutor').value = autor;
 

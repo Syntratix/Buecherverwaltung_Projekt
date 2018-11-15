@@ -2,7 +2,7 @@
 "use strict"
 
 var firebaseRefChild = firebase.database().ref().child("buecher");
-//Methode zum speichern des Buches
+//Methode zum speichern des Buches (Dominik Kunzmann)
 function save(){
     validateInputs();
 
@@ -44,7 +44,7 @@ function save(){
 
 }
 
-//Funktion die alle Input Felder die nicht ausgefüllt sind rot markiert
+//Funktion die alle Input Felder die nicht ausgefüllt sind rot markiert (Dominik Kunzmann)
 
  let validateInputs = () => {
     let allInputs = document.querySelectorAll("input");
@@ -68,6 +68,8 @@ function save(){
         }
 };
 
+
+//Hinzufügen der Eventlistener auf die einzelnen Objekte (Dominik Kunzmann)
 var isbnIsValid = require('is-isbn');
 
 window.addEventListener("load",()=>{
@@ -84,7 +86,7 @@ window.addEventListener("load",()=>{
     saveVar();
 });
 
-//Methode die Gültigkeit der ISBN Checkt
+//Methode die Gültigkeit der ISBN Checkt (Dominik Kunzmann)
 
 let onIsbnInput =(event)=>{
     let value = event.srcElement.value;
@@ -106,6 +108,7 @@ let onIsbnInput =(event)=>{
     }
 }
 
+//Kontrolle ob Auglage ausgefüllt ist (Dominik Kunzmann)
 let checkEdition = ()=>{
     let iAuflage =  document.getElementById('bAuflage');
     let aAuflage = iAuflage.value;
@@ -117,7 +120,7 @@ let checkEdition = ()=>{
         iAuflage.classList.add("error");
     }
 }
-//Funktion die automatisch ausgefüllten Felder für den User sperrt
+//Funktion die automatisch ausgefüllten Felder für den User sperrt (Dominik Kunzmann)
 
 let readOnlyInput = (bDisable)=>{
 
@@ -133,7 +136,7 @@ let readOnlyInput = (bDisable)=>{
 
 }
 
-//Funktion um die alle Felder nach Eingabe einer gütligen ISBN befüllt
+//Funktion um die alle Felder nach Eingabe einer gütligen ISBN befüllt (Dominik Kunzmann)
 
 let getBookDetails = (isbn) => {
 
@@ -150,7 +153,13 @@ let getBookDetails = (isbn) => {
           let autor = "";
           let autors = data["items"][0].volumeInfo.authors;
           for(let i = 0; i < autors.length; i++){
-              autor += autors[i] + ", ";
+              if(i == autors.length-1){
+                  autor += autors[i];
+              }
+              else{
+                  autor += autors[i] + ", ";
+              }
+
           }
           document.getElementById('bAutor').value = autor;
 
@@ -165,6 +174,7 @@ let getBookDetails = (isbn) => {
   });
 }
 
+//Funktion zum suchen von Büchern durch die Searchbar (Daniel Wenzl)
 function searchBooks(event){
     var sucheingabe = document.getElementById('suchBar').value;
     ///wenn klick oder wenn event.keyKEy ===13
@@ -175,7 +185,7 @@ function searchBooks(event){
 
 }
 
-
+//Funktion die zur Generierung der Kategoriepunkte dient (Emil Schilberg)
 function li(cat){
     let liPara = "list-group-item";
     let categorie = Array.from(cat);
@@ -186,10 +196,6 @@ function li(cat){
             li.addEventListener("click",clickOnLi);
             li.innerHTML = categorie[u];
             masterLi.appendChild(li);
-        /*
-        $("#secCat").append(
-            "<li class='"+liPara+"' onclick='clickOnLi(event)'>" + categorie[u] +"</li>"
-        );*/
     }
 }
 
@@ -200,6 +206,7 @@ function clickOnLi(event){
 }
 
 
+//Funktion die Kategorie aus Firebase zieht (Dominik Kunzmann & Emil Schilberg)
   function saveVar(){
 
     var value = new Array();
