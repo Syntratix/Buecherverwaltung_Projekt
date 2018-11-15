@@ -19,6 +19,20 @@ tbody{
     margin-top: 0;
 }
 
+#titel_th{
+  width:60%;
+}
+#autor_th{
+  width:45%;
+}
+#jahr_th{
+  width:5%;
+}
+
+#isbn_th{
+  width:10%;
+}
+
 /*Verschiedene Größeneinstellungen*/
 @media screen and (min-width: 768px){
 

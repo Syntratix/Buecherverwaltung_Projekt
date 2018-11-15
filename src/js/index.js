@@ -75,18 +75,26 @@ function urlLeeren () {
 
 
 function start(){
+  var urlParameterCat = window.location.hash;
+  var urlParameter = window.location.search;
   saveVar();
 
-    var urlParameter = window.location.search;
-    if (urlParameter !== ""){
-        var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));
-        urlLeeren();
-        reLoadTabel(2, search);
-    }
-    else {
-        loadTabel();
+    if(urlParameterCat!==""){
+      var cat = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('#') + 6));
+      urlLeeren();
+      reLoadTabel(3, cat);
+    }else {
+        if (urlParameter !== ""){
+          var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));
+          urlLeeren();
+          reLoadTabel(2, search);
+        }
+        else {
+            loadTabel();
+        }
     }
 }
+
 
 function loadTabel(){
     delTabel();

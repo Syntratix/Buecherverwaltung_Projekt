@@ -85,6 +85,8 @@ window.addEventListener("load",()=>{
     suchBar.addEventListener("keyup", searchBooks);
     let suchKnopf = document.getElementById('submitButton');
     suchKnopf.addEventListener("click", searchBooks);
+    var catLoad = document.getElementById('secCat');
+    catLoad.addEventListener("load", saveVar);
 });
 
 //Methode die Gültigkeit der ISBN Checkt
@@ -190,8 +192,9 @@ function li(cat){
 }
 
 function clickOnLi(event){
-  let cat = event.srcElement.innerHTML;
-  reLoadTabel(3,cat);
+  var cat = event.srcElement.innerHTML;
+  var newURL = "../index.html#hash=" + cat;
+  document.location.href= newURL;
 }
 
 

@@ -2,6 +2,7 @@
 
 var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 6));
 var firebaseRef = firebase.database().ref("buecher/");
+var firebaseRefChild = firebase.database().ref().child("buecher");
 
 document.getElementById("suchBar").addEventListener("keyup",function (event) {
     event.preventDefault();
@@ -51,7 +52,7 @@ function speichern(){
 
 function searchBooks(){
     var sucheingabe = document.getElementById('suchBar').value;
-    var newURL = "../index.html?search="+ sucheingabe;
+    var newURL = "../index.html?search=" + sucheingabe;
     document.location.href= newURL;
 }
 
@@ -66,8 +67,9 @@ function li(cat){
 }
 
 function clickOnLi(event){
-  let cat = event.srcElement.innerHTML;
-  reLoadTabel(3,cat);
+  var cat = event.srcElement.innerHTML;
+  var newURL = "../index.html#hash=" + cat;
+  document.location.href= newURL;
 }
 
 
