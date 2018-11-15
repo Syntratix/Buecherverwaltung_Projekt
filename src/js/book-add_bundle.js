@@ -1,8 +1,8 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict"
 
+var firebaseRefChild = firebase.database().ref().child("buecher");
 //Methode zum speichern des Buches
-
 function save(){
     validateInputs();
 
@@ -81,6 +81,7 @@ window.addEventListener("load",()=>{
     suchBar.addEventListener("keyup", searchBooks);
     let suchKnopf = document.getElementById('submitButton');
     suchKnopf.addEventListener("click", searchBooks);
+    saveVar();
 });
 
 //Methode die Gültigkeit der ISBN Checkt
@@ -165,13 +166,83 @@ let getBookDetails = (isbn) => {
 }
 
 function searchBooks(event){
-        var sucheingabe = document.getElementById('suchBar').value;
+    var sucheingabe = document.getElementById('suchBar').value;
     ///wenn klick oder wenn event.keyKEy ===13
     if(event.type==="click" || event.keyCode===13){
         var newURL = "../index.html?search="+ sucheingabe;
         document.location.href= newURL;
     }
 
+}
+
+
+function li(cat){
+    let liPara = "list-group-item";
+    let categorie = Array.from(cat);
+    let masterLi = document.getElementById("secCat");
+    for(let u = 0; u < categorie.length; u++){
+            let li = document.createElement("li");
+            li.classList.add(liPara);
+            li.addEventListener("click",clickOnLi);
+            li.innerHTML = categorie[u];
+            masterLi.appendChild(li);
+        /*
+        $("#secCat").append(
+            "<li class='"+liPara+"' onclick='clickOnLi(event)'>" + categorie[u] +"</li>"
+        );*/
+    }
+}
+
+function clickOnLi(event){
+  var cat = event.srcElement.innerHTML;
+  var newURL = "../index.html#hash=" + cat;
+  document.location.href= newURL;
+}
+
+
+  function saveVar(){
+
+    var value = new Array();
+    let pet = new Set();
+
+    firebaseRefChild.on("value", snapshot =>{
+        var data = snapshot.val();
+        var key;
+        //var i = 0;
+        //p = 0;
+
+
+        for(key in data){
+            pet.add(data[key].kategorie);
+            // value[i] = data[key].kategorie;
+            // i++;
+        }
+
+        // var cat = new Array();
+        // cat[0] = "test";
+        //
+        // for(var k = 0; k < value.length; k++){
+        // var bril = false;
+        //     for(var j = 0; j <= cat.length-1; j++){
+        //         if(value[k] == cat[j]){
+        //             bril = true;
+        //         }
+        //         else{
+        //             if(bril == true){
+        //                 continue;
+        //             }
+        //             else{
+        //                 bril = false;
+        //             }
+        //         }
+        //     }
+        //     if(bril == false){
+        //         cat[p] = value[k];
+        //         p++;
+        //     }
+        // }
+        li(pet);
+    })
 }
 
 },{"is-isbn":2}],2:[function(require,module,exports){

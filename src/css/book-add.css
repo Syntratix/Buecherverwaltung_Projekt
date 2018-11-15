@@ -120,7 +120,7 @@ input[type=number]::-webkit-outer-spin-button{
 
 @media screen and (min-width: 1200px){
     .row{
-        height: 50%;
+        height: 100%;
     }
 
     #gesTable{
